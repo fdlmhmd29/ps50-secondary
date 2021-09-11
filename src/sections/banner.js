@@ -91,7 +91,7 @@ const styles = {
   text: {
     header: {
       textAlign: "center",
-      color: "primary",
+      color: "heading",
     },
     content: {
       textAlign: "center",

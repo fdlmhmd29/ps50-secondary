@@ -14,7 +14,10 @@ export default {
     border_color: "#E5ECF4", // border color
     yellow: "#FFA740", // border color
     primary: "#EA3A60", // primary button and link color
-    secondary: "#2563FF", // secondary color - can be used for hover states
+    secondary: "#FF3F5B", // secondary color - can be used for hover states
+    card_text_primary: "#B62D4B",
+    card_text_secondary: "#B62D4B",
+    list_primary: "#fff",
     muted: "#E4E4E4", // muted color
     accent: "#609", // a contrast color for emphasizing UI
 
@@ -23,9 +26,14 @@ export default {
       dark: {
         text: "#FFFFFF",
         text_secondary: "#FFFFFF",
+        heading: "#F28500",
+        heading_secondary: "#FFFFFF",
         background: "#2F2E2E",
         primary: "#F28500",
-        secondary: "#09c",
+        secondary: "#FF9D00",
+        card_text_primary: "#BF6800",
+        card_text_secondary: "#BF6800",
+        list_primary: "#2F2E2E",
         muted: "#111",
       },
     },

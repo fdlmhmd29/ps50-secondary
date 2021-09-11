@@ -398,12 +398,12 @@ const styles = {
     padding: "7px",
     margin: "0 auto",
     borderRadius: "5px",
-    backgroundColor: "#F7F8FB",
+    backgroundColor: "primary",
     button: {
       border: 0,
       padding: ["15px 20px", "15px 27px"],
       borderRadius: "5px",
-      color: "text",
+      color: "card_text_secondary",
       fontSize: [1, 2],
       lineHeight: 1.2,
       fontWeight: 500,
@@ -413,8 +413,8 @@ const styles = {
       letterSpacing: "-0.24px",
       transition: "all 0.3s",
       "&.active": {
-        color: "#0f2137",
-        backgroundColor: "#ffffff",
+        color: "#fff",
+        backgroundColor: "secondary",
         boxShadow: "0 3px 4px rgba(38, 78, 118, 0.1)",
       },
       "&:focus": {
