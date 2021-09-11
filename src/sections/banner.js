@@ -14,10 +14,10 @@ export default function Banner() {
     <section sx={styles.banner} id="home">
       <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
-          <Heading sx={styles.text.align} as="h1" variant="heroPrimary">
+          <Heading sx={styles.text.header} as="h1" variant="heroPrimary">
             Digital Agency terpercaya di Indonesia
           </Heading>
-          <Text sx={styles.text.align} as="p" variant="heroSecondary">
+          <Text sx={styles.text.content} as="p" variant="heroSecondary">
             Kami hadir sebagai pionir Startup Digital Agency untuk membantu
             pelaku bisnis Micro-Small-Medium Enterprise (UMKM) untuk memperluas
             jangkauan pasar dan meningkatkan branding terutama di Social Media.
@@ -89,8 +89,13 @@ const styles = {
     },
   },
   text: {
-    align: {
+    header: {
       textAlign: "center",
+      color: "primary",
+    },
+    content: {
+      textAlign: "center",
+      color: "text",
     },
   },
 };
