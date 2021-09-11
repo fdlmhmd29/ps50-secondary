@@ -32,7 +32,7 @@ export default {
         primary: "#F28500",
         secondary: "#FF9D00",
         card_text_primary: "#BF6800",
-        card_text_secondary: "#555353",
+        card_text_secondary: "#A6A4A5",
         list_primary: "#2F2E2E",
         muted: "#111",
       },
