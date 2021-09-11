@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import { Container, Grid, Box, Heading, Text } from "theme-ui";
-import OtherSectionHeader from "components/other-section-header";
+import SectionHeaderWorkflow from "components/section-header-workflow";
 
 import PatternBG from "assets/patternBG.png";
 import ArrowOdd from "assets/arrowOdd.svg";
@@ -34,7 +34,7 @@ export default function WorkFlow() {
   return (
     <section sx={styles.workflow}>
       <Container>
-        <OtherSectionHeader
+        <SectionHeaderWorkflow
           slogan="Whats the function"
           title="Let’s see how it works"
           isWhite={true}

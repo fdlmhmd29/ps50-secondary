@@ -16,7 +16,7 @@ export default {
     primary: "#EA3A60", // primary button and link color
     secondary: "#FF3F5B", // secondary color - can be used for hover states
     card_text_primary: "#B62D4B",
-    card_text_secondary: "#B62D4B",
+    card_text_secondary: "#CCCCCC",
     list_primary: "#fff",
     muted: "#E4E4E4", // muted color
     accent: "#609", // a contrast color for emphasizing UI
@@ -32,7 +32,7 @@ export default {
         primary: "#F28500",
         secondary: "#FF9D00",
         card_text_primary: "#BF6800",
-        card_text_secondary: "#BF6800",
+        card_text_secondary: "#555353",
         list_primary: "#2F2E2E",
         muted: "#111",
       },
