@@ -71,7 +71,7 @@ const styles = {
     fontSize: ["15px", 2, null, null, null, "17px", null, 3],
     fontWeight: 400,
     lineHeight: [1.85, null, null, 2, null, "2.2"],
-    color: "text_secondary",
+    color: "text",
     mb: "30px",
   },
 };
