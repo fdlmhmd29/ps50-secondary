@@ -234,12 +234,14 @@ const styles = {
       lineHeight: 1.4,
       fontWeight: 700,
       mb: [2, null, 3, 2, 3],
+      color: "primary",
     },
 
     subTitle: {
       fontSize: [1, null, null, "14px", 1],
       fontWeight: 400,
       lineHeight: 1.9,
+      color: "text",
     },
   },
   videoWrapper: {
