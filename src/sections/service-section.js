@@ -11,7 +11,7 @@ import {
   Image,
 } from "theme-ui";
 import { keyframes } from "@emotion/react";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image";
 import TextFeature from "components/text-feature";
 import ModalVideo from "react-modal-video";
 import { useStaticQuery, graphql } from "gatsby";
@@ -44,30 +44,18 @@ const data = {
 };
 
 export default function ServiceSection() {
-  // Graphql image query
-  const dataThumb = useStaticQuery(graphql`
-    {
-      placeholderImage: file(relativePath: { eq: "service-thumb.png" }) {
-        childImageSharp {
-          gatsbyImageData(width: 620, layout: CONSTRAINED)
-        }
-      }
-    }
-  `);
-
   // modal popup video handler
   const [videoOpen, setVideoOpen] = useState(false);
   const handleClick = (e) => {
     e.preventDefault();
     setVideoOpen(true);
   };
+
   return (
     <section sx={{ variant: "section.services" }}>
       <Container sx={styles.containerBox}>
         <Box sx={styles.thumbnail}>
-          <GatsbyImage
-            image={dataThumb.placeholderImage.childImageSharp.gatsbyImageData}
-          />
+          <StaticImage src="../assets/svg/graphs.svg" />
           <Button
             sx={styles.videoBtn}
             onClick={handleClick}
@@ -79,7 +67,7 @@ export default function ServiceSection() {
           </Button>
 
           <Box sx={styles.shapeBox}>
-            <Image src={shapePattern} alt="Shape" />
+            {/* <Image src={shapePattern} alt="Shape" /> */}
           </Box>
         </Box>
         <Box sx={styles.contentBox}>

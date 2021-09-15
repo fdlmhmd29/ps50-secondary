@@ -2,16 +2,19 @@
 
 // Red Circles
 import { jsx } from "theme-ui";
-import { Container, Box, Heading, Text, Button } from "theme-ui";
-import { StaticImage } from "gatsby-plugin-image";
+import { Container, Box, Heading, Text, Button, Image } from "theme-ui";
 
 // Yellow Circles
-import ShapeLeft from "assets/shape-left.png";
-import ShapeRight from "assets/shape-right.png";
+import PatternBG from "assets/patternBG.png";
+import developer from "assets/svg/developer.svg";
 
 export default function Banner() {
   return (
     <section sx={styles.banner} id="home">
+      {/* 
+      styles.banner.container
+      css-1cxyi2a-Banner 
+      */}
       <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
           <Heading sx={styles.text.header} as="h1" variant="heroPrimary">
@@ -22,10 +25,13 @@ export default function Banner() {
             pelaku bisnis Micro-Small-Medium Enterprise (UMKM) untuk memperluas
             jangkauan pasar dan meningkatkan branding terutama di Social Media.
           </Text>
-          <Button variant="primary">Explore</Button>
+          <Button sx={styles.banner.justBtn} variant="primary">
+            Explore
+          </Button>
         </Box>
-
-        <StaticImage src="../assets/images/smm.svg" />
+        <Box>
+          <Image src={developer} />
+        </Box>
       </Container>
     </section>
   );
@@ -37,44 +43,34 @@ const styles = {
     pb: [2, null, 0, null, 2, 0, null, 5],
     position: "relative",
     zIndex: 2,
-    "&::before": {
-      position: "absolute",
-      content: '""',
-      bottom: 6,
-      left: 0,
-      height: "100%",
-      width: "100%",
-      zIndex: -1,
-      backgroundImage: `url(${ShapeLeft})`,
-      backgroundRepeat: `no-repeat`,
-      backgroundPosition: "bottom left",
-      backgroundSize: "36%",
-    },
-    "&::after": {
-      position: "absolute",
-      content: '""',
-      bottom: "40px",
-      right: 0,
-      height: "100%",
-      width: "100%",
-      zIndex: -1,
-      backgroundImage: `url(${ShapeRight})`,
-      backgroundRepeat: `no-repeat`,
-      backgroundPosition: "bottom right",
-      backgroundSize: "32%",
-    },
+    backgroundColor: "primary",
+    backgroundImage: `url(${PatternBG})`,
+    backgroundRepeat: `no-repeat`,
+    backgroundPosition: "center center",
+    backgroundSize: "cover",
+    position: "relative",
+    py: [8, null, 9, null, null, 10],
+
+    // Container
     container: {
-      minHeight: "inherit",
       display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
+      alignItems: "center",
+      justifyContent: "space-between",
+      flexWrap: ["wrap", null, null, "nowrap"],
+      pb: [null, "145px", "155px", "170px", null, null, "1px", "215px"],
+      pt: ["40px", "145px", "155px", "170px", null, null, "1px", "215px"],
     },
+
+    // Content Box
     contentBox: {
-      width: ["100%", "90%", "535px", null, "57%", "60%", "68%", "60%"],
+      // width: ["100%", "90%", "535px", null, "57%", "60%", "68%", "60%"],
       mx: "auto",
-      textAlign: "center",
-      mb: ["40px", null, null, null, null, 7],
+      textAlign: "left",
+      pb: ["20px", "145px", "155px", "170px", null, null, "21px", "215px"],
+      pt: [null, "145px", "155px", "170px", null, null, "1px", "215px"],
     },
+
+    // Image Box
     imageBox: {
       justifyContent: "center",
       textAlign: "center",
@@ -87,15 +83,20 @@ const styles = {
         height: [245, "auto"],
       },
     },
+    justBtn: {
+      backgroundColor: "justBtn",
+      color: "text",
+      fontWeight: "bold",
+    },
   },
   text: {
     header: {
-      textAlign: "center",
-      color: "heading",
+      textAlign: "left",
+      color: "white",
     },
     content: {
-      textAlign: "center",
-      color: "text",
+      textAlign: "left",
+      color: "white",
     },
   },
 };

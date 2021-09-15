@@ -67,14 +67,9 @@ const styles = {
     position: "absolute",
     top: 0,
     left: 0,
-    backgroundColor: "transparent",
+    backgroundColor: "background",
     transition: "all 0.4s ease",
     animation: `${positionAnim} 0.4s ease`,
-    ".donate__btn": {
-      flexShrink: 0,
-      mr: [15, 20, null, null, 0],
-      ml: ["auto", null, null, null, 0],
-    },
     "&.sticky": {
       position: "fixed",
       backgroundColor: "background",
@@ -98,9 +93,9 @@ const styles = {
       display: "block",
     },
     a: {
-      color: "text",
+      color: "navToggled",
       fontSize: 2,
-      fontWeight: "body",
+      fontWeight: "bold",
       px: 5,
       cursor: "pointer",
       lineHeight: "1.2",

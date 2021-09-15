@@ -13,11 +13,13 @@ export default {
     background_secondary: "#F9FBFD", // secondary background color
     border_color: "#E5ECF4", // border color
     yellow: "#FFA740", // border color
-    primary: "#EA3A60", // primary button and link color
+    primary: "#F28500", // primary button and link color
     secondary: "#FF3F5B", // secondary color - can be used for hover states
     card_text_primary: "#B62D4B",
     card_text_secondary: "#CCCCCC",
     list_primary: "#fff",
+    justBtn: "#fff",
+    navToggled: "#2F2E2E",
     muted: "#E4E4E4", // muted color
     accent: "#609", // a contrast color for emphasizing UI
 
@@ -34,6 +36,8 @@ export default {
         card_text_primary: "#BF6800",
         card_text_secondary: "#A6A4A5",
         list_primary: "#2F2E2E",
+        justBtn: "#2F2E2E",
+        navToggled: "#fff",
         muted: "#111",
       },
     },
@@ -182,7 +186,7 @@ export default {
       lineHeight: [1.9, null, null, 2],
       fontWeight: "body",
       mb: 5,
-      px: [0, null, 5, 6, null, 8, 9],
+      // px: [0, null, 5, 6, null, 8, 9],
       color: "heading",
     },
     title: {

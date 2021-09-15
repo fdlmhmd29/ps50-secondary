@@ -91,6 +91,7 @@ const MobileDrawer = () => {
 
 const styles = {
   handler: {
+    color: "text",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",

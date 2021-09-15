@@ -1,10 +1,8 @@
 /** @jsx jsx */
 import { jsx, Container, Box, Image } from "theme-ui";
 import TextFeature from "components/text-feature";
-import { GatsbyImage } from "gatsby-plugin-image";
-import { useStaticQuery, graphql } from "gatsby";
 
-import shapePattern from "assets/shape-pattern2.png";
+import branding from "assets/svg/branding.svg";
 
 const data = {
   subTitle: "Core features",
@@ -17,14 +15,6 @@ const data = {
 
 export default function CoreFeature() {
   // Graphql image query
-  const dataThumb = useStaticQuery(graphql`{
-  placeholderImage: file(relativePath: {eq: "core-feature.png"}) {
-    childImageSharp {
-      gatsbyImageData(width: 620, layout: CONSTRAINED)
-    }
-  }
-}
-`);
   return (
     <section sx={{ variant: "section.coreFeature" }}>
       <Container sx={styles.containerBox}>
@@ -38,10 +28,7 @@ export default function CoreFeature() {
           />
         </Box>
         <Box sx={styles.thumbnail}>
-          <GatsbyImage image={dataThumb.placeholderImage.childImageSharp.gatsbyImageData} />
-          <Box sx={styles.shapeBox}>
-            <Image src={shapePattern} alt="Shape" />
-          </Box>
+          <Image src={branding} />
         </Box>
       </Container>
     </section>
@@ -78,12 +65,5 @@ const styles = {
       zIndex: 1,
       height: [310, "auto"],
     },
-  },
-  shapeBox: {
-    position: "absolute",
-    bottom: -65,
-    right: -165,
-    zIndex: -1,
-    display: ["none", "inline-block", "none", null, "inline-block"],
   },
 };
