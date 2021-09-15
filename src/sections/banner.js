@@ -11,6 +11,10 @@ import developer from "assets/svg/developer.svg";
 export default function Banner() {
   return (
     <section sx={styles.banner} id="section">
+      {/* 
+      styles.banner.container
+      css-1cxyi2a-Banner 
+      */}
       <Container sx={styles.banner.container} id="container">
         <Box sx={styles.banner.contentBox} id="contentBox">
           <Heading
@@ -21,7 +25,12 @@ export default function Banner() {
           >
             Digital Agency terpercaya di Indonesia
           </Heading>
-          <Text sx={styles.text.content} as="p" variant="heroSecondary">
+          <Text
+            sx={styles.text.content}
+            id="content"
+            as="p"
+            variant="heroSecondary"
+          >
             Kami hadir sebagai pionir Startup Digital Agency untuk membantu
             pelaku bisnis Micro-Small-Medium Enterprise (UMKM) untuk memperluas
             jangkauan pasar dan meningkatkan branding terutama di Social Media.
@@ -40,9 +49,9 @@ export default function Banner() {
 
 const styles = {
   banner: {
-    pt: [null, "100px", "1px", "1px", "1px", "150px", "1px", "1px"],
-    pb: ["1px", "1px", "1px", "1px", "1px", "90px", "1px", "1px"],
-    px: ["20px", "1px", "1px", "1px", "1px", "70px", "1px", "1px"],
+    pt: ["0px", "0px", "0px", "0px", "0px", "150px", "0px", "0px"],
+    pb: ["0px", "0px", "0px", "0px", "0px", "90px", "0px", "0px"],
+    px: ["0px", "0px", "0px", "0px", "0px", "70px", "0px", "0px"],
     position: "relative",
     zIndex: 2,
     backgroundColor: "primary",
@@ -58,10 +67,10 @@ const styles = {
       alignItems: "center",
       justifyContent: "space-between",
       flexWrap: ["wrap", null, null, "nowrap"],
-      mx: [null, "100px", "1px", "1px", "1px", "150px", "1px", "1px"],
-      pt: ["107px", "100px", "1px", "1px", "1px", "150px", "1px", "1px"],
-      pb: ["1px", "1px", "1px", "1px", "1px", "90px", "1px", "1px"],
-      px: ["0px", "1px", "1px", "1px", "1px", "70px", "1px", "1px"],
+      mx: ["0px", "0px", "0px", "0px", "0px", "150px", "0px", "0px"],
+      pt: ["83px", "0px", "0px", "0px", "0px", "150px", "0px", "0px"],
+      pb: ["25px", "0px", "0px", "0px", "0px", "90px", "0px", "0px"],
+      px: ["24px", "0px", "0px", "0px", "0px", "70px", "0px", "0px"],
     },
 
     // Content Box
@@ -69,11 +78,10 @@ const styles = {
       width: ["100%", "90%", "535px", null, "57%", "60%", "68%", "60%"],
       mx: "auto",
       textAlign: "left",
-      mb: ["25px", "100px", "1px", "1px", "1px", "150px", "1px", "1px"],
-      mx: [null, "100px", "1px", "1px", "1px", "150px", "1px", "1px"],
-      pt: ["0px", "100px", "1px", "1px", "1px", "150px", "1px", "1px"],
-      pb: ["1px", "1px", "1px", "1px", "1px", "90px", "1px", "1px"],
-      px: ["4px", "1px", "1px", "1px", "1px", "70px", "1px", "1px"],
+      mb: ["25px", "0px", "0px", "0px", "0px", "150px", "0px", "0px"],
+      pt: ["25px", "0px", "0px", "0px", "0px", "150px", "0px", "0px"],
+      pb: ["0px", "0px", "0px", "0px", "0px", "90px", "0px", "0px"],
+      px: ["0px", "0px", "0px", "0px", "0px", "70px", "0px", "0px"],
     },
 
     // Image Box
@@ -100,14 +108,18 @@ const styles = {
     heading: {
       textAlign: "left",
       color: "white",
-      mb: ["25px", "100px", "1px", "1px", "1px", "150px", "1px", "1px"],
-      pt: [null, "100px", "1px", "1px", "1px", "150px", "1px", "1px"],
-      pb: [null, "1px", "1px", "1px", "1px", "90px", "1px", "1px"],
-      px: ["0px", "1px", "1px", "1px", "1px", "70px", "1px", "1px"],
+      mb: ["25px", "0px", "0px", "0px", "0px", "150px", "0px", "0px"],
+      pt: ["0px", "0px", "0px", "0px", "0px", "150px", "0px", "0px"],
+      pb: ["0px", "0px", "0px", "0px", "0px", "90px", "0px", "0px"],
+      px: ["0px", "0px", "0px", "0px", "0px", "70px", "0px", "0px"],
     },
     content: {
       textAlign: "left",
       color: "white",
+      mb: ["25px", "0px", "0px", "0px", "0px", "150px", "0px", "0px"],
+      pt: ["0px", "0px", "0px", "0px", "0px", "150px", "0px", "0px"],
+      pb: ["0px", "0px", "0px", "0px", "0px", "90px", "0px", "0px"],
+      px: ["0px", "0px", "0px", "0px", "0px", "70px", "0px", "0px"],
     },
   },
 };
