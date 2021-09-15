@@ -10,14 +10,15 @@ import developer from "assets/svg/developer.svg";
 
 export default function Banner() {
   return (
-    <section sx={styles.banner} id="home">
-      {/* 
-      styles.banner.container
-      css-1cxyi2a-Banner 
-      */}
-      <Container sx={styles.banner.container}>
-        <Box sx={styles.banner.contentBox}>
-          <Heading sx={styles.text.header} as="h1" variant="heroPrimary">
+    <section sx={styles.banner} id="section">
+      <Container sx={styles.banner.container} id="container">
+        <Box sx={styles.banner.contentBox} id="contentBox">
+          <Heading
+            sx={styles.text.heading}
+            id="heading"
+            as="h1"
+            variant="heroPrimary"
+          >
             Digital Agency terpercaya di Indonesia
           </Heading>
           <Text sx={styles.text.content} as="p" variant="heroSecondary">
@@ -39,8 +40,9 @@ export default function Banner() {
 
 const styles = {
   banner: {
-    pt: ["140px", "145px", "155px", "170px", null, null, "180px", "215px"],
-    pb: [2, null, 0, null, 2, 0, null, 5],
+    pt: [null, "100px", "1px", "1px", "1px", "150px", "1px", "1px"],
+    pb: ["1px", "1px", "1px", "1px", "1px", "90px", "1px", "1px"],
+    px: ["20px", "1px", "1px", "1px", "1px", "70px", "1px", "1px"],
     position: "relative",
     zIndex: 2,
     backgroundColor: "primary",
@@ -49,7 +51,6 @@ const styles = {
     backgroundPosition: "center center",
     backgroundSize: "cover",
     position: "relative",
-    py: [8, null, 9, null, null, 10],
 
     // Container
     container: {
@@ -57,17 +58,22 @@ const styles = {
       alignItems: "center",
       justifyContent: "space-between",
       flexWrap: ["wrap", null, null, "nowrap"],
-      pb: [null, "145px", "155px", "170px", null, null, "1px", "215px"],
-      pt: ["40px", "145px", "155px", "170px", null, null, "1px", "215px"],
+      mx: [null, "100px", "1px", "1px", "1px", "150px", "1px", "1px"],
+      pt: ["132px", "100px", "1px", "1px", "1px", "150px", "1px", "1px"],
+      pb: ["1px", "1px", "1px", "1px", "1px", "90px", "1px", "1px"],
+      px: ["0px", "1px", "1px", "1px", "1px", "70px", "1px", "1px"],
     },
 
     // Content Box
     contentBox: {
-      // width: ["100%", "90%", "535px", null, "57%", "60%", "68%", "60%"],
+      width: ["100%", "90%", "535px", null, "57%", "60%", "68%", "60%"],
       mx: "auto",
       textAlign: "left",
-      pb: ["20px", "145px", "155px", "170px", null, null, "21px", "215px"],
-      pt: [null, "145px", "155px", "170px", null, null, "1px", "215px"],
+      mb: ["25px", "100px", "1px", "1px", "1px", "150px", "1px", "1px"],
+      mx: [null, "100px", "1px", "1px", "1px", "150px", "1px", "1px"],
+      pt: ["0px", "100px", "1px", "1px", "1px", "150px", "1px", "1px"],
+      pb: ["1px", "1px", "1px", "1px", "1px", "90px", "1px", "1px"],
+      px: ["4px", "1px", "1px", "1px", "1px", "70px", "1px", "1px"],
     },
 
     // Image Box
@@ -90,9 +96,14 @@ const styles = {
     },
   },
   text: {
-    header: {
+    // Heading
+    heading: {
       textAlign: "left",
       color: "white",
+      mb: ["25px", "100px", "1px", "1px", "1px", "150px", "1px", "1px"],
+      pt: [null, "100px", "1px", "1px", "1px", "150px", "1px", "1px"],
+      pb: [null, "1px", "1px", "1px", "1px", "90px", "1px", "1px"],
+      px: ["0px", "1px", "1px", "1px", "1px", "70px", "1px", "1px"],
     },
     content: {
       textAlign: "left",
