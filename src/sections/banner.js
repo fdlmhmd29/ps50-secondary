@@ -67,21 +67,21 @@ const styles = {
       alignItems: "center",
       justifyContent: "space-between",
       flexWrap: ["wrap", null, null, "nowrap"],
+      width: ["100%", "100%", "535px", null, "57%", "60%", "68%", "60%"],
       mx: ["0px", "0px", "0px", "0px", "0px", "150px", "0px", "0px"],
       pt: ["83px", "108px", null, "0px", "0px", "150px", "0px", "0px"],
       pb: ["0px", "0px", "0px", "0px", "0px", "90px", "0px", "0px"],
-      px: ["24px", "24px", null, "0px", "0px", "70px", "0px", "0px"],
+      px: ["24px", "34px", null, "0px", "0px", "70px", "0px", "0px"],
     },
 
     // Content Box
     contentBox: {
-      width: ["100%", "90%", "535px", null, "57%", "60%", "68%", "60%"],
-      mx: "auto",
+      width: ["100%", "100%", "535px", null, "57%", "60%", "68%", "60%"],
       textAlign: "left",
+      mx: ["0px", "0px", null, "0px", "0px", "150px", "0px", "0px"],
       mb: ["25px", "25px", null, "0px", "0px", "150px", "0px", "0px"],
       pt: ["25px", "0px", "0px", "0px", "0px", "150px", "0px", "0px"],
-      pb: ["0px", "0px", "0px", "0px", "0px", "90px", "0px", "0px"],
-      px: ["0px", "0px", "0px", "0px", "0px", "70px", "0px", "0px"],
+      px: ["0px", "0px", null, "0px", "0px", "70px", "0px", "0px"],
     },
 
     // Image Box
@@ -108,15 +108,21 @@ const styles = {
     heading: {
       textAlign: "left",
       color: "white",
+      width: ["100%", "100%", "535px", null, "57%", "60%", "68%", "60%"],
       mb: ["25px", "25px", null, "0px", "0px", "150px", "0px", "0px"],
     },
     content: {
       textAlign: "left",
       color: "white",
+      width: ["100%", "100%", "535px", null, "57%", "60%", "68%", "60%"],
       mb: ["25px", "25px", null, "0px", "0px", "150px", "0px", "0px"],
     },
   },
   img: {
+    width: ["100%", "100%", "535px", null, "57%", "60%", "68%", "60%"],
     pb: ["25px", "25px", null, "0px", "0px", "90px", "0px", "0px"],
+    justifyContent: "center",
+    textAlign: "center",
+    display: "inline-flex",
   },
 };
