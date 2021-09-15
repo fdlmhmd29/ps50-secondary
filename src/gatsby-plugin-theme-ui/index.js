@@ -43,8 +43,8 @@ export default {
     },
   },
   breakpoints: [
+    "414px",
     "480px",
-    "640px",
     "768px",
     "1024px",
     "1220px",

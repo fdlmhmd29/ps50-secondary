@@ -39,7 +39,7 @@ export default function Banner() {
             Explore
           </Button>
         </Box>
-        <Box>
+        <Box id="img" sx={styles.img}>
           <Image src={developer} />
         </Box>
       </Container>
@@ -49,9 +49,9 @@ export default function Banner() {
 
 const styles = {
   banner: {
-    pt: ["0px", "0px", "0px", "0px", "0px", "150px", "0px", "0px"],
-    pb: ["0px", "0px", "0px", "0px", "0px", "90px", "0px", "0px"],
-    px: ["0px", "0px", "0px", "0px", "0px", "70px", "0px", "0px"],
+    // pt: ["0px", "0px", "0px", "0px", "0px", "150px", "0px", "0px"],
+    // pb: ["0px", "0px", "0px", "0px", "0px", "90px", "0px", "0px"],
+    // px: ["0px", "0px", "0px", "0px", "0px", "70px", "0px", "0px"],
     position: "relative",
     zIndex: 2,
     backgroundColor: "primary",
@@ -68,9 +68,9 @@ const styles = {
       justifyContent: "space-between",
       flexWrap: ["wrap", null, null, "nowrap"],
       mx: ["0px", "0px", "0px", "0px", "0px", "150px", "0px", "0px"],
-      pt: ["83px", "0px", "0px", "0px", "0px", "150px", "0px", "0px"],
-      pb: ["25px", "0px", "0px", "0px", "0px", "90px", "0px", "0px"],
-      px: ["24px", "0px", "0px", "0px", "0px", "70px", "0px", "0px"],
+      pt: ["83px", "108px", null, "0px", "0px", "150px", "0px", "0px"],
+      pb: ["0px", "0px", "0px", "0px", "0px", "90px", "0px", "0px"],
+      px: ["24px", "24px", null, "0px", "0px", "70px", "0px", "0px"],
     },
 
     // Content Box
@@ -78,7 +78,7 @@ const styles = {
       width: ["100%", "90%", "535px", null, "57%", "60%", "68%", "60%"],
       mx: "auto",
       textAlign: "left",
-      mb: ["25px", "0px", "0px", "0px", "0px", "150px", "0px", "0px"],
+      mb: ["25px", "25px", null, "0px", "0px", "150px", "0px", "0px"],
       pt: ["25px", "0px", "0px", "0px", "0px", "150px", "0px", "0px"],
       pb: ["0px", "0px", "0px", "0px", "0px", "90px", "0px", "0px"],
       px: ["0px", "0px", "0px", "0px", "0px", "70px", "0px", "0px"],
@@ -108,18 +108,15 @@ const styles = {
     heading: {
       textAlign: "left",
       color: "white",
-      mb: ["25px", "0px", "0px", "0px", "0px", "150px", "0px", "0px"],
-      pt: ["0px", "0px", "0px", "0px", "0px", "150px", "0px", "0px"],
-      pb: ["0px", "0px", "0px", "0px", "0px", "90px", "0px", "0px"],
-      px: ["0px", "0px", "0px", "0px", "0px", "70px", "0px", "0px"],
+      mb: ["25px", "25px", null, "0px", "0px", "150px", "0px", "0px"],
     },
     content: {
       textAlign: "left",
       color: "white",
-      mb: ["25px", "0px", "0px", "0px", "0px", "150px", "0px", "0px"],
-      pt: ["0px", "0px", "0px", "0px", "0px", "150px", "0px", "0px"],
-      pb: ["0px", "0px", "0px", "0px", "0px", "90px", "0px", "0px"],
-      px: ["0px", "0px", "0px", "0px", "0px", "70px", "0px", "0px"],
+      mb: ["25px", "25px", null, "0px", "0px", "150px", "0px", "0px"],
     },
+  },
+  img: {
+    pb: ["25px", "25px", null, "0px", "0px", "90px", "0px", "0px"],
   },
 };
