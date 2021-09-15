@@ -59,7 +59,7 @@ const styles = {
       justifyContent: "space-between",
       flexWrap: ["wrap", null, null, "nowrap"],
       mx: [null, "100px", "1px", "1px", "1px", "150px", "1px", "1px"],
-      pt: ["132px", "100px", "1px", "1px", "1px", "150px", "1px", "1px"],
+      pt: ["107px", "100px", "1px", "1px", "1px", "150px", "1px", "1px"],
       pb: ["1px", "1px", "1px", "1px", "1px", "90px", "1px", "1px"],
       px: ["0px", "1px", "1px", "1px", "1px", "70px", "1px", "1px"],
     },
