@@ -64,20 +64,29 @@ const styles = {
       alignItems: "center",
       justifyContent: "space-between",
       flexWrap: ["wrap", null, null, "nowrap"],
-      width: ["100%", "100%", "100%", "100%", "100%", "60%", "68%", "60%"],
-      pt: ["83px", "108px", null, "109px", "108px", "150px", "0px", "0px"],
-      pb: ["0px", "0px", "0px", "31px", "30px", "90px", "0px", "0px"],
-      px: ["24px", "34px", null, "31px", "30px", "70px", "0px", "0px"],
+      width: ["100%", "100%", "100%", "100%", "100%", "100%", "100%", "100%"],
+      pt: ["96px", "108px", null, "109px", "108px", "142px", "154px", "0px"],
+      pb: [
+        "97px", // < 414
+        "145px", // > 414
+        "10px",
+        "50px",
+        "50px",
+        "65px",
+        "110px",
+        "0px",
+      ],
+      px: ["24px", "34px", null, "50px", "50px", "100px", "30px", "0px"],
     },
 
     // Content Box
     contentBox: {
-      width: ["100%", "100%", "100%", null, "100%", "60%", "68%", "60%"],
+      width: ["100%", "100%", "100%", null, "100%", "100%", "100 %", "100%"],
       textAlign: "left",
-      mr: ["0px", "0px", null, "25px", "25px", "150px", "0px", "0px"],
-      mb: ["25px", "25px", null, "0px", "0px", "150px", "0px", "0px"],
-      pt: ["25px", "0px", "0px", "0px", "0px", "150px", "0px", "0px"],
-      px: ["0px", "0px", null, "0px", "0px", "70px", "0px", "0px"],
+      mr: ["0px", "0px", null, "25px", "25px", "25px", "0px", "0px"],
+      mb: ["25px", "25px", null, "0px", "0px", "25px", "0px", "0px"],
+      pt: ["25px", "0px", "0px", "0px", "0px", "0px", "0px", "0px"],
+      px: ["0px", "0px", null, "0px", "0px", "0px", "0px", "0px"],
     },
 
     // Image Box
@@ -87,7 +96,6 @@ const styles = {
       display: "inline-flex",
       mb: [0, null, -6, null, null, "-40px", null, -3],
       width: ["100%", null, null, 720, "100%", 1000],
-      mx: "auto",
       img: {
         position: "relative",
         height: [245, "auto"],
@@ -104,18 +112,18 @@ const styles = {
     heading: {
       textAlign: "left",
       color: "white",
-      width: ["100%", "100%", "100%", null, "100%", "60%", "68%", "60%"],
-      mb: ["25px", "25px", null, "25px", "25px", "150px", "0px", "0px"],
+      width: ["100%", "100%", "100%", null, "100%", "100%", "100 %", "100%"],
+      mb: ["25px", "25px", null, "25px", "25px", "25px", "25px", "25px"],
     },
     content: {
       textAlign: "left",
       color: "white",
-      width: ["100%", "100%", "100%", "100%", "100%", "60%", "68%", "60%"],
-      mb: ["25px", "25px", null, "25px", "25px", "150px", "0px", "0px"],
+      width: ["100%", "100%", "100%", "100%", "100%", "100%", "100 %", "100%"],
+      mb: ["25px", "25px", null, "25px", "25px", "25px", "25px", "25px"],
     },
   },
   img: {
-    width: ["100%", "100%", "100%", "100%", "100%", "60%", "68%", "60%"],
+    width: ["100%", "100%", "100%", "100%", "100%", "100%", "100 %", "100%"],
     pb: ["25px", "25px", null, "0px", "0px", "90px", "0px", "0px"],
     justifyContent: "center",
     textAlign: "center",

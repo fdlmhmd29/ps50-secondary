@@ -17,7 +17,7 @@ export default function Header({ className }) {
   return (
     <DrawerProvider>
       <header sx={styles.header} className={className} id="header">
-        <Container sx={styles.container}>
+        <Container sx={styles.container} id="container">
           <Logo src={LogoDark} />
 
           <Flex as="nav" sx={styles.nav}>
@@ -85,6 +85,7 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
+    px: ["24px", "34px", null, "50px", "50px", "100px", "30px", "0px"],
   },
   nav: {
     mx: "auto",
