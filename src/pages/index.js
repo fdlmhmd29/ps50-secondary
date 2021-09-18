@@ -13,7 +13,6 @@ import TeamSection from "sections/team-section";
 import TestimonialCard from "sections/testimonial";
 import BlogSection from "sections/blog-section";
 import Subscribe from "sections/subscribe";
-import TawkTo from "gatsby-plugin-tawk";
 
 // Load other package css file
 import "react-multi-carousel/lib/styles.css";
@@ -23,7 +22,6 @@ import "rc-drawer/assets/index.css";
 export default function IndexPage() {
   return (
     <StickyProvider>
-      <TawkTo />
       <Layout>
         <SEO title="Maxmore - Digital Agency" />
         <Banner />
