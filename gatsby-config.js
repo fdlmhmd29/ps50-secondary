@@ -5,6 +5,13 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-tawk`,
+      options: {
+        tawkId: "613ef3d025797d7a89fea1ad",
+        // tawkKey: "58a426535af61e3bab993be2861cab8381724fb5",
+      },
+    },
     `gatsby-plugin-theme-ui`,
     `gatsby-plugin-react-helmet`,
     {
@@ -44,13 +51,6 @@ module.exports = {
             },
           ],
         },
-      },
-    },
-    {
-      resolve: `gatsby-plugin-tawk.to`,
-      options: {
-        tawkId: "613ef3d025797d7a89fea1ad",
-        tawkKey: "58a426535af61e3bab993be2861cab8381724fb5",
       },
     },
     {

@@ -77,11 +77,11 @@ export default function Subscribe() {
         <Box sx={styles.contentBox}>
           <Box sx={styles.contentBoxInner}>
             <Heading as="h2" sx={styles.title}>
-              Subscribe to our Blog
+              Diskon potongan harga?
             </Heading>
             <Text as="p" sx={styles.description}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod
-              tempor incididunt labore dolore.
+              Berlangganan feed-post yang akan dikirimkan ke alamat email
+              langsung.
             </Text>
             <form onSubmit={subscribe}>
               <Flex sx={styles.subscribeForm}>
@@ -93,7 +93,7 @@ export default function Subscribe() {
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="Enter your email address"
+                  placeholder="Masukan alamat email Anda"
                 />
 
                 <div>
@@ -108,13 +108,13 @@ export default function Subscribe() {
                   type="submit"
                   disabled={status.submitting}
                   className="subscribe__btn"
-                  aria-label="Subscribe"
+                  aria-label="Berlangganan"
                 >
                   {!status.submitting
                     ? !status.submitted
-                      ? "Subscribe"
-                      : "Submitted"
-                    : "Submitting..."}
+                      ? "Langganan"
+                      : "Berlangganan"
+                    : "Mengirim..."}
                 </Button>
               </Flex>
             </form>

@@ -29,7 +29,7 @@ export default function PriceCard({
         <List items={points} childStyle={styles.listItem} />
         <Text className="package__price" sx={styles.price}>
           {priceWithUnit}
-          <span>/Monthly</span>
+          <span>/Bulan</span>
         </Text>
         <Box sx={styles.buttonGroup}>
           <Button sx={styles.justBtn} variant="primary" aria-label={buttonText}>

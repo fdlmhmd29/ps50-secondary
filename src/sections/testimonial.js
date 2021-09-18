@@ -18,12 +18,12 @@ import Avatar4 from "assets/testimonial/avatar4.png";
 const data = [
   {
     id: 1,
-    title: "Modern look & trending design",
+    title: "Sangat Membantu Pertumbuhan Bisnis Saya",
     description:
-      "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
+      "Max More terbukti mampu meningkatkan pendapatan bisnis saya dengan sangat efektif dan alami.",
     avatar: Avatar1,
-    name: "Denny Hilguston",
-    designation: "@denny.hil",
+    name: "Bitter Sweet",
+    designation: "@bitter_sweet_id",
     review: 4,
   },
   {
@@ -86,8 +86,8 @@ export default function TestimonialCard() {
     <section id="testimonial" sx={{ variant: "section.testimonial" }}>
       <Container css={{ textAlign: "center" }}>
         <SectionHeaderTestimonial
-          slogan="Testimonial"
-          title="Meet Client Satisfaction"
+          slogan="Testimoni"
+          title="Mereka sudah pernah menggunakan"
         />
       </Container>
       <Box sx={styles.carouselWrapper}>

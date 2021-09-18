@@ -1,3 +1,4 @@
+// Red Circles
 import React, { useState } from "react";
 /** @jsx jsx */
 import {
@@ -13,66 +14,42 @@ import {
 import { keyframes } from "@emotion/react";
 import { StaticImage } from "gatsby-plugin-image";
 import TextFeature from "components/text-feature";
-import ModalVideo from "react-modal-video";
-import { useStaticQuery, graphql } from "gatsby";
-import { IoIosPlay } from "react-icons/io";
 
-import shapePattern from "assets/shape-pattern1.png";
-
-import Smart from "assets/services/smart.svg";
-import Secure from "assets/services/secure.svg";
+// Yellow Circles
+import fullScale from "assets/svg/full-scale.svg";
+import optimization from "assets/svg/optimization.svg";
 
 const data = {
-  subTitle: "our services",
-  title: "Business Goals Achieved with Design",
+  subTitle: "Layanan Utama Maxmore",
+  title: "Social Media Management",
   features: [
     {
       id: 1,
-      imgSrc: Smart,
-      altText: "Smart Features",
-      title: "Smart Features",
-      text: "Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests.",
+      imgSrc: fullScale,
+      altText: "Full Scale",
+      title: "Full Scale",
+      text: "Layanan manajemen akun Social Media (Full Scale) untuk mengaktifkan brand Anda secara digital.",
     },
     {
       id: 2,
-      imgSrc: Secure,
-      altText: "Secure Contents",
-      title: "Secure Contents",
-      text: "Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests.",
+      imgSrc: optimization,
+      altText: "Social Media Optimization",
+      title: "Social Media Optimization",
+      text: "Mulai dari Market Research, Brand Activation, Content Creation, Engagement Building, Periodic Report, hingga Social Media Optimization.",
     },
   ],
 };
 
 export default function ServiceSection() {
   // modal popup video handler
-  const [videoOpen, setVideoOpen] = useState(false);
-  const handleClick = (e) => {
-    e.preventDefault();
-    setVideoOpen(true);
-  };
-
   return (
     <section sx={{ variant: "section.services" }}>
       <Container sx={styles.containerBox}>
         <Box sx={styles.thumbnail}>
           <StaticImage src="../assets/svg/graphs.svg" />
-          <Button
-            sx={styles.videoBtn}
-            onClick={handleClick}
-            aria-label="Play Button"
-          >
-            <span>
-              <IoIosPlay />
-            </span>
-          </Button>
-
-          <Box sx={styles.shapeBox}>
-            {/* <Image src={shapePattern} alt="Shape" /> */}
-          </Box>
         </Box>
         <Box sx={styles.contentBox}>
           <TextFeature subTitle={data.subTitle} title={data.title} />
-
           <Grid sx={styles.grid}>
             {data.features.map((item) => (
               <Box sx={styles.card} key={item.id}>
@@ -87,12 +64,6 @@ export default function ServiceSection() {
           </Grid>
         </Box>
       </Container>
-      <ModalVideo
-        channel="youtube"
-        isOpen={videoOpen}
-        videoId="ZNA9rmDsYVE"
-        onClose={() => setVideoOpen(false)}
-      />
     </section>
   );
 }
@@ -205,7 +176,7 @@ const styles = {
   },
 
   icon: {
-    width: ["45px", null, null, null, "55px"],
+    width: ["55px", null, null, null, "65px"],
     height: "auto",
     flexShrink: 0,
     mr: [3, null, null, null, 4],

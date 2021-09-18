@@ -12,30 +12,30 @@ const data = [
   {
     id: 1,
     imgSrc: Performance,
-    altText: "Fast Performance",
-    title: "Fast Performance",
-    text: "Let’s just get this out of the way - there will always be a kit version of Edu flow. Paid subscriptions allow us to continue helping learners around the world.",
+    altText: "Social Media Engagement",
+    title: "Social Media Engagement",
+    text: "Layanan peningkatkan interaksi akun seperti Followers, Subscribers, Likes, dan Views secara instant untuk menambah kepercayaan konsumen dan interaksi organic terhadap brand Anda di Social Media.",
   },
   {
     id: 2,
     imgSrc: Partnership,
-    altText: "Pro Subscription",
-    title: "Pro Subscription",
-    text: "We believe it’s important for everyone to have access to software – especially when it comes to digital learning be navigated by keyboard and screen readers.",
+    altText: "Branding & Design",
+    title: "Branding & Design",
+    text: "Layanan pembuatan konten digital untuk keperluan Branding dan Marketing dengan gaya kekinian dan Ter up-to-date di Social Media.",
   },
   {
     id: 3,
     imgSrc: Subscription,
-    altText: "Partnership deal",
-    title: "Partnership deal",
-    text: "Let’s just get this out of the way - there will always be a kit version of Edu flow. Paid subscriptions allow us to continue helping learners around the world.",
+    altText: "Digital Campaign",
+    title: "Digital Campaign",
+    text: "Layanan manajemen iklan/campaign diberbagai Social Media dengan riset yang mendalam menggunakan cara paling efektif dan efisien untuk mencapai Goal Marketing Anda!",
   },
   {
     id: 4,
     imgSrc: Support,
-    altText: "Memahami Kebutuhan Anda",
-    title: "Memahami Kebutuhan Anda",
-    text: "We believe it’s important for everyone to have access to software – especially when it comes to digital learning be navigated by keyboard and screen readers.",
+    altText: "eMarketplace Engagement",
+    title: "eMarketplace Engagement",
+    text: "Layanan manajemen eMarketplace dengan riset yang mendalam menggunakan cara paling efektif dan efisien untuk mencapai Goal Marketing Anda!",
   },
 ];
 
@@ -44,8 +44,8 @@ export default function Feature() {
     <section sx={{ variant: "section.feature" }}>
       <Container>
         <SectionHeader
-          slogan="Quality features"
-          title="Amazing useful features"
+          slogan="Layanan Lainnya"
+          title="Me-Maximalkan brand Anda"
         />
 
         <Grid sx={styles.grid}>

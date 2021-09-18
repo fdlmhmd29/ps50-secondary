@@ -12,115 +12,115 @@ const packages = {
   monthly: [
     {
       id: 1,
-      name: "Free Plan",
-      description: "For Small teams or office",
-      buttonText: "Start free trail",
-      priceWithUnit: "$0",
+      name: "Pengguna Pertama",
+      description: "Sangat cocok untuk pengguna pertama",
+      buttonText: "Hubungi",
+      priceWithUnit: "Rp. 0,-",
       points: [
         {
           id: 1,
           icon: <IoIosCheckmarkCircle />,
-          text: "Drag & Drop Builder",
+          text: "Konsultasi",
           isAvailable: true,
         },
         {
           id: 2,
           icon: <IoIosCheckmarkCircle />,
-          text: "1,000's of Templates",
+          text: "Design & Branding",
           isAvailable: true,
         },
         {
           id: 3,
           icon: <IoIosCheckmarkCircle />,
-          text: "Blog Support Tools",
+          text: "Marketing",
           isAvailable: true,
         },
         {
           id: 4,
           icon: <IoIosCloseCircle />,
-          text: "eCommerce Store ",
+          text: "Analisa Insight",
           isAvailable: true,
         },
       ],
     },
-    {
-      id: 2,
-      name: "Business king",
-      description: "For Enterprise business",
-      priceWithUnit: "$15",
-      buttonText: "Create account",
-      anotherOption: "Or Start 14 Days trail",
-      points: [
-        {
-          id: 1,
-          icon: <IoIosCheckmarkCircle />,
-          text: "Drag & Drop Builder",
-          isAvailable: true,
-        },
-        {
-          id: 2,
-          icon: <IoIosCheckmarkCircle />,
-          text: "1,000's of Templates",
-          isAvailable: true,
-        },
-        {
-          id: 3,
-          icon: <IoIosCheckmarkCircle />,
-          text: "Blog Support Tools",
-          isAvailable: true,
-        },
-        {
-          id: 4,
-          icon: <IoIosCheckmarkCircle />,
-          text: "eCommerce Store ",
-          isAvailable: true,
-        },
-      ],
-    },
-    {
-      id: 3,
-      header: "Suggested",
-      headerIcon: <IoIosCheckmarkCircle />,
-      name: "Pro Master",
-      description: "For pro level developers",
-      priceWithUnit: "$24",
-      buttonText: "Create account",
-      anotherOption: "Or Start 14 Days trail",
-      points: [
-        {
-          id: 1,
-          icon: <IoIosCheckmarkCircle />,
-          text: "Drag & Drop Builder",
-          isAvailable: true,
-        },
-        {
-          id: 2,
-          icon: <IoIosCheckmarkCircle />,
-          text: "1,000's of Templates",
-          isAvailable: true,
-        },
-        {
-          id: 3,
-          icon: <IoIosCheckmarkCircle />,
-          text: "Blog Support Tools",
-          isAvailable: true,
-        },
-        {
-          id: 4,
-          icon: <IoIosCheckmarkCircle />,
-          text: "eCommerce Store ",
-          isAvailable: true,
-        },
-      ],
-    },
+    // {
+    //   id: 2,
+    //   name: "Business king",
+    //   description: "For Enterprise business",
+    //   priceWithUnit: "Rp. -",
+    //   buttonText: "Hubungi",
+    //   anotherOption: "Or Start 14 Days trail",
+    //   points: [
+    //     {
+    //       id: 1,
+    //       icon: <IoIosCheckmarkCircle />,
+    //       text: "Drag & Drop Builder",
+    //       isAvailable: true,
+    //     },
+    //     {
+    //       id: 2,
+    //       icon: <IoIosCheckmarkCircle />,
+    //       text: "1,000's of Templates",
+    //       isAvailable: true,
+    //     },
+    //     {
+    //       id: 3,
+    //       icon: <IoIosCheckmarkCircle />,
+    //       text: "Blog Support Tools",
+    //       isAvailable: true,
+    //     },
+    //     {
+    //       id: 4,
+    //       icon: <IoIosCheckmarkCircle />,
+    //       text: "eCommerce Store ",
+    //       isAvailable: true,
+    //     },
+    //   ],
+    // },
+    // {
+    //   id: 3,
+    //   header: "Suggested",
+    //   headerIcon: <IoIosCheckmarkCircle />,
+    //   name: "Pro Master",
+    //   description: "For pro level developers",
+    //   priceWithUnit: "Rp. -",
+    //   buttonText: "Hubungi",
+    //   anotherOption: "Or Start 14 Days trail",
+    //   points: [
+    //     {
+    //       id: 1,
+    //       icon: <IoIosCheckmarkCircle />,
+    //       text: "Drag & Drop Builder",
+    //       isAvailable: true,
+    //     },
+    //     {
+    //       id: 2,
+    //       icon: <IoIosCheckmarkCircle />,
+    //       text: "1,000's of Templates",
+    //       isAvailable: true,
+    //     },
+    //     {
+    //       id: 3,
+    //       icon: <IoIosCheckmarkCircle />,
+    //       text: "Blog Support Tools",
+    //       isAvailable: true,
+    //     },
+    //     {
+    //       id: 4,
+    //       icon: <IoIosCheckmarkCircle />,
+    //       text: "eCommerce Store ",
+    //       isAvailable: true,
+    //     },
+    //   ],
+    // },
   ],
   annual: [
     {
       id: 1,
-      name: "Free Plan",
-      description: "For Small teams or office",
-      buttonText: "Start free trail",
-      priceWithUnit: "$0",
+      name: "Pengguna Pertama",
+      description: "Sangat cocok untuk pengguna pertama",
+      buttonText: "Hubungi",
+      priceWithUnit: "Rp. -",
       points: [
         {
           id: 1,
@@ -148,76 +148,76 @@ const packages = {
         },
       ],
     },
-    {
-      id: 2,
-      name: "Business king",
-      description: "For Enterprise business",
-      priceWithUnit: "$25",
-      buttonText: "Create account",
-      anotherOption: "Or Start 10 Days trail",
-      points: [
-        {
-          id: 1,
-          icon: <IoIosCheckmarkCircle />,
-          text: "eCommerce Store",
-          isAvailable: true,
-        },
-        {
-          id: 2,
-          icon: <IoIosCheckmarkCircle />,
-          text: "Blog Support Tools",
-          isAvailable: true,
-        },
-        {
-          id: 3,
-          icon: <IoIosCheckmarkCircle />,
-          text: "1,000's of Templates",
-          isAvailable: true,
-        },
-        {
-          id: 4,
-          icon: <IoIosCheckmarkCircle />,
-          text: "Drag & Drop Builder ",
-          isAvailable: true,
-        },
-      ],
-    },
-    {
-      id: 3,
-      header: "Suggested",
-      headerIcon: <IoIosCheckmarkCircle />,
-      name: "Pro Master",
-      description: "For pro level developers",
-      priceWithUnit: "$39",
-      buttonText: "Create account",
-      anotherOption: "Or Start 10 Days trail",
-      points: [
-        {
-          id: 1,
-          icon: <IoIosCheckmarkCircle />,
-          text: "eCommerce Store",
-          isAvailable: true,
-        },
-        {
-          id: 2,
-          icon: <IoIosCheckmarkCircle />,
-          text: "Blog Support Tools",
-          isAvailable: true,
-        },
-        {
-          id: 3,
-          icon: <IoIosCheckmarkCircle />,
-          text: "1,000's of Templates",
-          isAvailable: true,
-        },
-        {
-          id: 4,
-          icon: <IoIosCheckmarkCircle />,
-          text: "Drag & Drop Builder ",
-          isAvailable: true,
-        },
-      ],
-    },
+    // {
+    //   id: 2,
+    //   name: "Business king",
+    //   description: "For Enterprise business",
+    //   priceWithUnit: "Rp. -",
+    //   buttonText: "Hubungi",
+    //   anotherOption: "Or Start 10 Days trail",
+    //   points: [
+    //     {
+    //       id: 1,
+    //       icon: <IoIosCheckmarkCircle />,
+    //       text: "eCommerce Store",
+    //       isAvailable: true,
+    //     },
+    //     {
+    //       id: 2,
+    //       icon: <IoIosCheckmarkCircle />,
+    //       text: "Blog Support Tools",
+    //       isAvailable: true,
+    //     },
+    //     {
+    //       id: 3,
+    //       icon: <IoIosCheckmarkCircle />,
+    //       text: "1,000's of Templates",
+    //       isAvailable: true,
+    //     },
+    //     {
+    //       id: 4,
+    //       icon: <IoIosCheckmarkCircle />,
+    //       text: "Drag & Drop Builder ",
+    //       isAvailable: true,
+    //     },
+    //   ],
+    // },
+    // {
+    //   id: 3,
+    //   header: "Suggested",
+    //   headerIcon: <IoIosCheckmarkCircle />,
+    //   name: "Pro Master",
+    //   description: "For pro level developers",
+    //   priceWithUnit: "Rp. -",
+    //   buttonText: "Hubungi",
+    //   anotherOption: "Or Start 10 Days trail",
+    //   points: [
+    //     {
+    //       id: 1,
+    //       icon: <IoIosCheckmarkCircle />,
+    //       text: "eCommerce Store",
+    //       isAvailable: true,
+    //     },
+    //     {
+    //       id: 2,
+    //       icon: <IoIosCheckmarkCircle />,
+    //       text: "Blog Support Tools",
+    //       isAvailable: true,
+    //     },
+    //     {
+    //       id: 3,
+    //       icon: <IoIosCheckmarkCircle />,
+    //       text: "1,000's of Templates",
+    //       isAvailable: true,
+    //     },
+    //     {
+    //       id: 4,
+    //       icon: <IoIosCheckmarkCircle />,
+    //       text: "Drag & Drop Builder ",
+    //       isAvailable: true,
+    //     },
+    //   ],
+    // },
   ],
 };
 
@@ -289,18 +289,18 @@ export default function Package() {
     <section id="pricing" sx={{ variant: "section.pricing" }}>
       <Container>
         <SectionHeader
-          slogan="Pricing Plan"
-          title="Choose your pricing policy"
+          slogan="Harga Paket"
+          title="Pilih paket yang sesuai untuk bisnis Anda"
         />
         <Flex sx={styles.buttonGroup}>
           <Box sx={styles.buttonGroupInner}>
             <button
               className={state.active === "monthly" ? "active" : ""}
               type="button"
-              aria-label="Monthly"
+              aria-label="Bulan"
               onClick={() => handlePricingPlan("monthly")}
             >
-              Monthly Plan
+              Paket Bulanan
             </button>
             <button
               className={state.active === "annual" ? "active" : ""}
@@ -308,7 +308,7 @@ export default function Package() {
               aria-label="Annual"
               onClick={() => handlePricingPlan("annual")}
             >
-              Annual Plan
+              Tahunan
             </button>
           </Box>
         </Flex>
@@ -398,12 +398,12 @@ const styles = {
     padding: "7px",
     margin: "0 auto",
     borderRadius: "5px",
-    backgroundColor: "primary",
+    backgroundColor: "#FF9D00",
     button: {
       border: 0,
       padding: ["15px 20px", "15px 27px"],
       borderRadius: "5px",
-      color: "card_text_secondary",
+      color: "#BF6800",
       fontSize: [1, 2],
       lineHeight: 1.2,
       fontWeight: 500,
@@ -414,7 +414,7 @@ const styles = {
       transition: "all 0.3s",
       "&.active": {
         color: "#fff",
-        backgroundColor: "secondary",
+        backgroundColor: "#F28500",
         boxShadow: "0 3px 4px rgba(38, 78, 118, 0.1)",
       },
       "&:focus": {

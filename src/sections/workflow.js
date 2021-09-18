@@ -10,23 +10,23 @@ import ArrowEven from "assets/arrowEven.svg";
 const data = [
   {
     id: 1,
-    title: "Set disbursement Instructions",
-    text: "Get your blood tests delivered at home collect a sample from the your blood tests.",
+    title: "Konsultasi Gratis",
+    text: "Kami siap membantu Anda memilih layanan yang sesuai dengan budget dan kebutuhan Anda.",
   },
   {
     id: 2,
-    title: "Assembly retrieves funds from your account",
-    text: "Get your blood tests delivered at home collect a sample from the your blood tests.",
+    title: "Tim Profesional",
+    text: "Dikelola oleh tim yang sudah berpengalaman mengelola Digital Marketing.",
   },
   {
     id: 3,
-    title: "Assembly initiates disbursement",
-    text: "Get your blood tests delivered at home collect a sample from the your blood tests.",
+    title: "Harga UMKM",
+    text: "Layanan lengkap dengan harga yang terjangkau untuk UMKM atau bisnis rintisan.",
   },
   {
     id: 4,
-    title: "Customer receives funds payment",
-    text: "Get your blood tests delivered at home collect a sample from the your blood tests.",
+    title: "Handle With Love",
+    text: "Kami akan mengelola Social Media Anda sepenuh hati dengan strategi yang sudah terbukti.",
   },
 ];
 
@@ -35,8 +35,8 @@ export default function WorkFlow() {
     <section sx={styles.workflow}>
       <Container>
         <SectionHeaderWorkflow
-          slogan="Whats the function"
-          title="Let’s see how it works"
+          slogan="KAMI MEMBUAT KEHADIRAN DIGITAL UNTUK MERK MODERN"
+          title="Mengapa Harus Kami?"
           isWhite={true}
         />
 

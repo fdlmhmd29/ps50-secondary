@@ -16,7 +16,7 @@
 		"gatsby-plugin-react-helmet": "^4.13.0",
 		"gatsby-plugin-robots-txt": "^1.5.0",
 		"gatsby-plugin-sharp": "^3.13.0",
-		"gatsby-plugin-tawk.to": "^1.0.8",
+		"gatsby-plugin-tawk": "^1.0.0",
 		"gatsby-plugin-theme-ui": "^0.11.2",
 		"gatsby-plugin-webfonts": "^2.1.1",
 		"gatsby-source-filesystem": "^3.13.0",
@@ -33,6 +33,7 @@
 		"react-multi-carousel": "^2.5.5",
 		"react-scroll": "^1.8.0",
 		"react-stickynode": "^4.0.0",
+		"react-toggle": "^4.1.2",
 		"theme-ui": "^0.11.2"
 	},
 	"devDependencies": {

@@ -21,9 +21,9 @@ const data = [
   {
     id: 1,
     imgSrc: Member1,
-    altText: "Saimon Harmer",
-    title: "Saimon Harmer",
-    designation: "CEO and Founder",
+    altText: "Ewaldo Bagas Lukrista",
+    title: "Ewaldo Bagas Lukrista",
+    designation: "CEO & Founder",
     socialProfile: [
       {
         id: 1,
@@ -48,9 +48,9 @@ const data = [
   {
     id: 2,
     imgSrc: Member2,
-    altText: "Aaron Nunez",
-    title: "Aaron Nunez",
-    designation: "Founder",
+    altText: "Teguh Muflih Rizky",
+    title: "Teguh Muflih Rizky",
+    designation: "Founder & Project Operation Lead",
     socialProfile: [
       {
         id: 1,
@@ -75,9 +75,9 @@ const data = [
   {
     id: 3,
     imgSrc: Member3,
-    altText: "Aaron Nunez",
-    title: "Aaron Nunez",
-    designation: "Web Designer",
+    altText: "Fadhil Muhammad",
+    title: "Fadhil Muhammad",
+    designation: "Technical Support",
     socialProfile: [
       {
         id: 1,
@@ -102,9 +102,9 @@ const data = [
   {
     id: 4,
     imgSrc: Member4,
-    altText: "Lina Jutila",
-    title: "Lina Jutila",
-    designation: "Web Developer",
+    altText: "Aprilya Nur Naidatuljanah",
+    title: "Aprilya Nur Naidatuljanah",
+    designation: "Digital Ads Specialist",
     socialProfile: [
       {
         id: 1,
@@ -129,9 +129,9 @@ const data = [
   {
     id: 5,
     imgSrc: Member5,
-    altText: "Saimon Harmer",
-    title: "Saimon Harmer",
-    designation: "CEO and Founder",
+    altText: "Stevani Tri Sari",
+    title: "Stevani Tri Sari",
+    designation: "Graphic Designer",
     socialProfile: [
       {
         id: 1,
@@ -156,9 +156,9 @@ const data = [
   {
     id: 6,
     imgSrc: Member6,
-    altText: "Aaron Nunez",
-    title: "Aaron Nunez",
-    designation: "Web Designer",
+    altText: "Mochamad Ghozali",
+    title: "Mochamad Ghozali",
+    designation: "Sr. Advisor",
     socialProfile: [
       {
         id: 1,
@@ -187,8 +187,8 @@ export default function TeamSection() {
     <section>
       <Container>
         <SectionHeader
-          slogan="our team"
-          title="The most qualified and talented individuals"
+          slogan="Team Kami"
+          title="Dinaungi oleh orang-orang profesional dalam bidangnya"
         />
 
         <Grid sx={styles.grid}>

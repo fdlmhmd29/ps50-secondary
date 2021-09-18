@@ -3,6 +3,7 @@
 // Red Circles
 import { jsx } from "theme-ui";
 import { Container, Box, Heading, Text, Button, Image } from "theme-ui";
+import { Link } from "react-scroll";
 
 // Yellow Circles
 import PatternBG from "assets/patternBG.png";
@@ -10,7 +11,7 @@ import developer from "assets/svg/developer.svg";
 
 export default function Banner() {
   return (
-    <section sx={styles.banner} id="section">
+    <section sx={styles.banner} id="beranda">
       {/* 
       styles.banner.container
       css-1cxyi2a-Banner 
@@ -35,9 +36,18 @@ export default function Banner() {
             pelaku bisnis Micro-Small-Medium Enterprise (UMKM) untuk memperluas
             jangkauan pasar dan meningkatkan branding terutama di Social Media.
           </Text>
-          <Button sx={styles.banner.justBtn} variant="primary">
-            Explore
-          </Button>
+          <Link
+            activeClass="active"
+            to="feature"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={1000}
+          >
+            <Button sx={styles.banner.justBtn} variant="primary">
+              Lanjutkan
+            </Button>
+          </Link>
         </Box>
         <Box id="img" sx={styles.img}>
           <Image src={developer} />

@@ -9,7 +9,7 @@ export default (props) => {
         setColorMode(colorMode === "light" ? "dark" : "light");
       }}
     >
-      Toggle {colorMode === "light" ? "Dark" : "Light"}
+      {colorMode === "light" ? "🌙" : "🔆"}
     </button>
   );
 };
