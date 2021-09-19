@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Maxmore - Digital Agency`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Max More - Digital Agency`,
+    description: `Max more merupakan sebuah layanan manajerial berbasis Digital Agency untuk membantu para pelaku usaha UMKM dalam mengembangkan bisnis mereka.`,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -20,13 +20,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Maxmore - Digital Agenct`,
+        name: `Maxmore - Digital Agency`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/images/logo.png`, // This path is relative to the root of the site.
+        icon: `src/assets/logo.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -37,10 +37,14 @@ module.exports = {
             {
               family: `DM Sans`,
               variants: [`400`, `500`, `700`],
-              //subsets: ['latin']
-              //text: 'Hello'
-              //fontDisplay: 'swap',
-              //strategy: 'selfHosted' // 'base64' || 'cdn'
+            },
+            {
+              family: `Bree Serif`,
+              variants: [`400`],
+            },
+            {
+              family: `Roboto Slab`,
+              variants: [`300`, `400`],
             },
           ],
         },
@@ -73,12 +77,14 @@ module.exports = {
         cookieDomain: "example.com",
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-mailchimp',
-    //   options: {
-    //     endpoint: '', // add your MC list endpoint here; see instructions from gatsby's website
-    //   },
-    // },
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://gmail.us8.list-manage.com/subscribe/post?u=2a1f277b33d0f3f94c94184e4&amp;id=0031a36f50", // add your MC list endpoint here; see instructions from gatsby's website
+        timeout: 3500,
+      },
+    },
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {

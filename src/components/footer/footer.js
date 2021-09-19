@@ -1,46 +1,50 @@
 /** @jsx jsx */
-import { jsx, Box, Grid, Container, Image, Heading, Text } from "theme-ui";
+import { jsx, Heading, Box, Text, Flex, Container } from "theme-ui";
 import { Link } from "components/link";
-import data from "./footer.data";
-import FooterLogo from "assets/logo.svg";
+import Logo from "components/logo";
+import menuItems from "./footer.data";
+
+import FooterLogo from "assets/footer-logo.svg";
+import CallToAction from "sections/call-to-action";
 export default function Footer() {
   return (
     <footer sx={styles.footer}>
-      <Container>
-        {/* <Grid sx={styles.widgets}>
-          {data.widgets.map((item) => (
-            <Box
-              key={`footer-widget--key${item.id}`}
-              sx={styles.widgets.widgetItem}
-            >
-              <Image src={item.iconSrc} alt={item.altText} />
-              <Box sx={styles.widgets.infoWrapper}>
-                <Heading as="h3">{item.title}</Heading>
-                <Text as="p">{item.description}</Text>
-              </Box>
+      <CallToAction />
+      <Container sx={styles.footer.container}>
+        <Box sx={styles.footer.footerTopArea}>
+          <Box sx={styles.copyrightArea}>
+            <Box className="footer__logo">
+              <Logo src={FooterLogo} />
             </Box>
-          ))}
-        </Grid> */}
-        {/* End of footer widgets area */}
-        <Box sx={styles.footer.footerBottomArea}>
-          <Link path="/">
-            <Image src={FooterLogo} alt="Logo" />
-          </Link>
-          <Box sx={styles.footer.menus}>
-            <nav>
-              {data.menuItem.map(({ path, label }, i) => (
-                <Link
-                  path={path}
-                  key={i}
-                  label={label}
-                  sx={styles.footer.link}
-                />
-              ))}
+            <nav className="footer__menu">
+              <Link path="/" label="Terms of use" />
+              <Link path="/" label="Privacy" />
             </nav>
+            <Text as="p" sx={styles.copyrightArea.copyright}>
+              Copyright by 2020 nukedButt, Inc
+            </Text>
           </Box>
-          <Text sx={styles.footer.copyright}>
-            Copyright by {new Date().getFullYear()} nukedButt
-          </Text>
+          <Flex sx={styles.footer.menuArea}>
+            {menuItems &&
+              menuItems.map(({ header, items }, i) => (
+                <Box sx={styles.footer.menus} key={i}>
+                  <Heading sx={styles.footer.heading}>{header}</Heading>
+                  <nav>
+                    {items.map(({ path, label, name, icon }, i) => (
+                      <Link
+                        className={name}
+                        path={path}
+                        key={i}
+                        sx={styles.footer.link}
+                      >
+                        {icon}
+                        {label}
+                      </Link>
+                    ))}
+                  </nav>
+                </Box>
+              ))}
+          </Flex>
         </Box>
       </Container>
     </footer>
@@ -49,77 +53,130 @@ export default function Footer() {
 
 const styles = {
   footer: {
-    footerBottomArea: {
-      // borderTop: "1px solid",
-      // borderTopColor: "border_color",
+    backgroundColor: "background_secondary",
+    container: {
+      width: "100%",
+      alignItems: "stretch",
+    },
+    footerTopArea: {
       display: "flex",
-      pt: [7, null, 8],
-      pb: ["40px", null, "100px"],
-      textAlign: "center",
-      flexDirection: "column",
+      flexWrap: "wrap",
+      pt: ["60px", null, null, null, 8],
+      pb: [7, null, null, null, "30px"],
+      pl: [0, null, 4, 6, null, 7],
+      pr: [0, null, 4, 6],
+    },
+    menuArea: {
+      width: [
+        "100%",
+        null,
+        null,
+        null,
+        "calc(100% - 250px)",
+        "calc(100% - 300px)",
+      ],
+      justifyContent: "space-between",
+      flexWrap: "wrap",
+      pb: 3,
     },
     menus: {
-      mt: [3, 4],
-      mb: 2,
-      nav: {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexWrap: "wrap",
-      },
+      display: "flex",
+      flexDirection: "column",
+      mb: ["45px", null, null, "50px", "60px"],
+      pr: 3,
+      width: ["50%", null, null, "25%"],
+    },
+
+    heading: {
+      fontSize: [2, 3],
+      color: "heading",
+      fontWeight: "heading",
+      litterSpacing: "heading",
+      mb: [4, null, null, null, 5, 6],
+      lineHeight: "1.35",
     },
 
     link: {
-      fontSize: [1, "15px"],
-      color: "text",
-      fontWeight: "400",
+      fontSize: ["14px", 1],
+      color: "text_secondary",
+      fontWeight: "body",
       mb: 2,
       cursor: "pointer",
       transition: "all 0.35s",
-      display: "block",
+      display: "flex",
+      alignItems: "center",
       textDecoration: "none",
-      lineHeight: [1.5, null, 1.8],
-      px: [2, null, 4],
+      lineHeight: [1.5, null, 1.9],
+      svg: {
+        width: "17px",
+        mr: 2,
+        fontSize: 2,
+        flexShrink: 0,
+      },
+      "&.facebook > svg": {
+        color: "#3B5998",
+      },
+      "&.twitter > svg": {
+        color: "#55ACEE",
+      },
+      "&.github > svg": {
+        color: "#161614",
+      },
+      "&.dribbble > svg": {
+        color: "#E74D89",
+      },
       ":hover": {
         color: "primary",
       },
-    },
-    copyright: {
-      fontSize: [1, "15px"],
-      width: "100%",
+      ":last-child": {
+        mb: "0px",
+      },
     },
   },
-  widgets: {
-    py: [8, null, 9],
-    px: [4, 0, 3, null, 7, 10],
-    width: ["100%", "80%", "100%"],
-    mx: "auto",
-    gridGap: ["40px 0", null, "45px 30px", null, "60px 30px", "50px 90px"],
-    gridTemplateColumns: [
-      "repeat(1,1fr)",
-      null,
-      "repeat(2,1fr)",
-      "repeat(3,1fr)",
-    ],
-    widgetItem: {
-      textAlign: "center",
+  copyrightArea: {
+    width: ["100%", null, null, null, "250px", "300px"],
+    flexShrink: 0,
+    order: [2, null, null, null, 0],
+    textAlign: ["center", null, null, null, "left"],
+    ".footer__logo": {
+      a: {
+        mr: 0,
+        img: {
+          mx: ["auto", null, null, null, 0],
+        },
+      },
     },
-    infoWrapper: {
-      mt: [2, 3, null, 2, 4],
-      mb: -1,
-      h3: {
-        fontSize: [3, null, null, 2, 3, 4],
-        color: "heading_secondary",
-        lineHeight: 1.4,
-        fontWeight: 700,
-        mb: [2, null, null, null, "15px"],
+    ".footer__menu": {
+      display: "flex",
+      justifyContent: ["center", null, null, null, "flex-start"],
+      flexWrap: "wrap",
+      mt: [3, null, null, null, 4],
+      a: {
+        fontSize: ["14px", 1],
+        color: "text_secondary",
+        fontWeight: "body",
+        mb: 1,
+        cursor: "pointer",
+        transition: "all 0.35s",
+        textDecoration: "none",
+        lineHeight: [1.5, null, 1.9],
+        ":before": {
+          px: 2,
+          content: '"|"',
+          color: "text_secondary",
+        },
+        ":first-of-type:before": {
+          display: "none",
+        },
+        ":hover": {
+          color: "primary",
+        },
       },
-
-      p: {
-        fontSize: [1, "15px"],
-        fontWeight: 400,
-        lineHeight: 2,
-      },
+    },
+    copyright: {
+      fontSize: ["14px", 1],
+      color: "#6D7886",
+      pt: 1,
     },
   },
 };

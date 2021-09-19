@@ -1,18 +1,18 @@
 export default [
   {
-    path: "beranda",
+    path: "home",
     label: "Beranda",
   },
   {
     path: "feature",
-    label: "Features",
+    label: "Fitur",
   },
   {
-    path: "pricing",
-    label: "Pricing",
+    path: "feedback",
+    label: "Umpan balik",
   },
   {
-    path: "testimonial",
-    label: "Testimonial",
+    path: "support",
+    label: "Bantuan",
   },
 ];

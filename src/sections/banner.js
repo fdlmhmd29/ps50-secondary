@@ -1,56 +1,75 @@
 /** @jsx jsx */
-
-// Red Circles
 import { jsx } from "theme-ui";
-import { Container, Box, Heading, Text, Button, Image } from "theme-ui";
-import { Link } from "react-scroll";
+import { Container, Flex, Box, Heading, Text, Image } from "theme-ui";
+import { Link } from "components/link";
+import Subscribe from "components/subscribe";
+import { GatsbyImage } from "gatsby-plugin-image";
+import { useStaticQuery, graphql } from "gatsby";
 
-// Yellow Circles
-import PatternBG from "assets/patternBG.png";
-import developer from "assets/svg/developer.svg";
+import client1 from "assets/sponsor/paypal.svg";
+import client2 from "assets/sponsor/google.svg";
+import client3 from "assets/sponsor/dropbox.svg";
+
+const data = [
+  {
+    id: 1,
+    path: "#",
+    image: client1,
+    title: "paypal",
+  },
+  {
+    id: 2,
+    path: "#",
+    image: client2,
+    title: "google",
+  },
+  {
+    id: 3,
+    path: "#",
+    image: client3,
+    title: "dropbox",
+  },
+];
 
 export default function Banner() {
+  // Graphql image query
+  const dataThumb = useStaticQuery(graphql`
+    {
+      placeholderImage: file(relativePath: { eq: "banner-thumb.png" }) {
+        childImageSharp {
+          gatsbyImageData(width: 740, layout: CONSTRAINED)
+        }
+      }
+    }
+  `);
   return (
-    <section sx={styles.banner} id="beranda">
-      {/* 
-      styles.banner.container
-      css-1cxyi2a-Banner 
-      */}
-      <Container sx={styles.banner.container} id="container">
-        <Box sx={styles.banner.contentBox} id="contentBox">
-          <Heading
-            sx={styles.text.heading}
-            id="heading"
-            as="h1"
-            variant="heroPrimary"
-          >
-            Digital Agency terpercaya di Indonesia
+    <section sx={styles.banner} id="home">
+      <Container sx={styles.banner.container}>
+        <Box sx={styles.banner.contentBox}>
+          <Heading as="h1" variant="heroPrimary">
+            Pengelola Sosial Media bisnis Anda
           </Heading>
-          <Text
-            sx={styles.text.content}
-            id="content"
-            as="p"
-            variant="heroSecondary"
-          >
-            Kami hadir sebagai pionir Startup Digital Agency untuk membantu
-            pelaku bisnis Micro-Small-Medium Enterprise (UMKM) untuk memperluas
-            jangkauan pasar dan meningkatkan branding terutama di Social Media.
+          <Text as="p" variant="heroSecondary">
+            Layanan lengkap manajemen akun Sosial Media mulai dari Pembuatan
+            Konten, Optimisasi, Marketing dan Manajemen.
           </Text>
-          <Link
-            activeClass="active"
-            to="feature"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={1000}
-          >
-            <Button sx={styles.banner.justBtn} variant="primary">
-              Lanjutkan
-            </Button>
-          </Link>
+          <Subscribe />
+          {/* <Flex sx={styles.sponsorBox}>
+            <Text sx={styles.sponsorTitle}>Klien kami:</Text>
+            <Box sx={styles.sponsorBox.sponsor}>
+              {data.map((item, index) => (
+                <Link path={item.path} key={`client-key${index}`}>
+                  <Image src={item.image} alt={item.title} />
+                </Link>
+              ))}
+            </Box>
+          </Flex> */}
         </Box>
-        <Box id="img" sx={styles.img}>
-          <Image src={developer} />
+
+        <Box sx={styles.banner.imageBox}>
+          <GatsbyImage
+            image={dataThumb.placeholderImage.childImageSharp.gatsbyImageData}
+          />
         </Box>
       </Container>
     </section>
@@ -59,84 +78,65 @@ export default function Banner() {
 
 const styles = {
   banner: {
-    position: "relative",
-    zIndex: 2,
-    backgroundColor: "primary",
-    backgroundImage: `url(${PatternBG})`,
-    backgroundRepeat: `no-repeat`,
-    backgroundPosition: "center center",
-    backgroundSize: "cover",
-    position: "relative",
-
-    // Container
+    backgroundColor: "white",
+    overflow: ["hidden", "initial", null, null, "hidden"],
+    pt: ["150px", "145px"],
+    pb: [0, null, null, null, 2],
     container: {
       display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-      flexWrap: ["wrap", null, null, "nowrap"],
-      width: ["100%", "100%", "100%", "100%", "100%", "100%", "100%", "100%"],
-      pt: ["96px", "108px", null, "109px", "108px", "142px", "154px", "0px"],
-      pb: [
-        "97px", // < 414
-        "145px", // > 414
-        "10px",
-        "50px",
-        "50px",
-        "65px",
-        "110px",
-        "0px",
-      ],
-      px: ["24px", "34px", null, "50px", "50px", "100px", "30px", "0px"],
+      flexDirection: ["column", null, null, null, "row"],
     },
-
-    // Content Box
     contentBox: {
-      width: ["100%", "100%", "100%", null, "100%", "100%", "100 %", "100%"],
-      textAlign: "left",
-      mr: ["0px", "0px", null, "25px", "25px", "25px", "0px", "0px"],
-      mb: ["25px", "25px", null, "0px", "0px", "25px", "0px", "0px"],
-      pt: ["25px", "0px", "0px", "0px", "0px", "0px", "0px", "0px"],
-      px: ["0px", "0px", null, "0px", "0px", "0px", "0px", "0px"],
-    },
-
-    // Image Box
-    imageBox: {
-      justifyContent: "center",
-      textAlign: "center",
-      display: "inline-flex",
-      mb: [0, null, -6, null, null, "-40px", null, -3],
-      width: ["100%", null, null, 720, "100%", 1000],
-      img: {
-        position: "relative",
-        height: [245, "auto"],
+      width: ["100%", 430, 550, "75%", "50%", "45%"],
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "flex-start",
+      flexShrink: 0,
+      pt: [0, null, null, null, null, 6, 7, "70px"],
+      mb: ["60px", null, null, null, 0],
+      mx: [0, "auto"],
+      textAlign: ["center", null, null, null, "left"],
+      ".subscribe__area": {
+        width: "100%",
+        pr: [0, null, null, null, 6, "65px"],
+        mb: ["35px", null, "45px"],
       },
     },
-    justBtn: {
-      backgroundColor: "justBtn",
-      color: "text",
-      fontWeight: "bold",
+    imageBox: {
+      justifyContent: "center",
+      textAlign: ["center", null, null, null, "right"],
+      mr: [0, null, null, null, null, null, -6, -7],
+      pl: [0, null, "40px"],
+      mb: [-2, null],
+      width: [330, "100%", null, null, 480, 640, 670, 760],
+      img: {
+        height: [360, "auto"],
+      },
     },
   },
-  text: {
-    // Heading
-    heading: {
-      textAlign: "left",
-      color: "white",
-      width: ["100%", "100%", "100%", null, "100%", "100%", "100 %", "100%"],
-      mb: ["25px", "25px", null, "25px", "25px", "25px", "25px", "25px"],
-    },
-    content: {
-      textAlign: "left",
-      color: "white",
-      width: ["100%", "100%", "100%", "100%", "100%", "100%", "100 %", "100%"],
-      mb: ["25px", "25px", null, "25px", "25px", "25px", "25px", "25px"],
-    },
+  sponsorTitle: {
+    fontSize: 2,
+    color: "#676A8B",
+    pr: [0, null, 4],
+    flexShrink: 0,
+    pb: [2, null, 0],
+    mt: "-1px",
   },
-  img: {
-    width: ["100%", "100%", "100%", "100%", "100%", "100%", "100 %", "100%"],
-    pb: ["25px", "25px", null, "0px", "0px", "90px", "0px", "0px"],
-    justifyContent: "center",
-    textAlign: "center",
-    display: "inline-flex",
+  sponsorBox: {
+    flexDirection: ["column", null, "row"],
+    width: "100%",
+    justifyContent: ["flex-start", null, "center", null, "flex-start"],
+    sponsor: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      "> a": {
+        mr: [4, null, 6],
+        display: "flex",
+        "&:last-of-type": {
+          mr: 0,
+        },
+      },
+    },
   },
 };

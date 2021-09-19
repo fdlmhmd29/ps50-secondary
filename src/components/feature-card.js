@@ -12,8 +12,10 @@ export default function FeatureCard({
       <Image src={src} alt={altText} sx={styles.img} />
 
       <Box sx={styles.wrapper}>
-        <Heading sx={styles.wrapper.title}>{title}</Heading>
-        <Text sx={styles.wrapper.subTitle}>{text}</Text>
+        <Heading sx={{ variant: "text.heading" }}>{title}</Heading>
+        <Text as="p" sx={styles.wrapper.description}>
+          {text}
+        </Text>
       </Box>
     </Box>
   );
@@ -23,33 +25,30 @@ const styles = {
   card: {
     display: "flex",
     alignItems: "flex-start",
-    mb: -1,
+    flexDirection: ["column", null, "row"],
+    px: [0, 5, 0],
   },
 
   img: {
-    width: ["70px", null, null, "80px", "90px", "auto"],
+    width: ["45px", null, "40px", "42px", null, null, null, "50px"],
     height: "auto",
     flexShrink: 0,
-    mr: [2, 3, null, null, 4, 5],
-    ml: -2,
+    mr: ["auto", null, 4, 5, null, null, null, 6],
+    mb: ["22px", 5],
+    ml: "auto",
   },
   wrapper: {
     width: "100%",
     display: "flex",
     flexDirection: "column",
-    mt: "-5px",
-    title: {
-      fontSize: [2, 3],
-      color: "primary",
-      lineHeight: 1.4,
-      fontWeight: 700,
-      mb: ["10px", null, "15px"],
-    },
-
-    subTitle: {
-      fontSize: [1, "15px"],
-      fontWeight: 400,
-      lineHeight: "1.9",
+    textAlign: ["center", null, "left"],
+    mt: ["-4px", "-7px"],
+    mb: -1,
+    description: {
+      fontSize: [1, 2],
+      fontWeight: "body",
+      lineHeight: 1.9,
+      pt: 2,
       color: "text",
     },
   },

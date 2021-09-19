@@ -1,43 +1,33 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import { Container, Grid, Box, Heading, Text } from "theme-ui";
-import SectionHeaderWorkflow from "components/section-header-workflow";
-
-import PatternBG from "assets/patternBG.png";
-import ArrowOdd from "assets/arrowOdd.svg";
-import ArrowEven from "assets/arrowEven.svg";
+import SectionHeader from "components/section-header";
 
 const data = [
   {
     id: 1,
-    title: "Konsultasi Gratis",
-    text: "Kami siap membantu Anda memilih layanan yang sesuai dengan budget dan kebutuhan Anda.",
+    title: "Daftar menggunakan Email",
+    text: "Email yang Anda gunakan untuk mendaftar akan kami gunakan sebagai sarana untuk menghubungi Anda.",
   },
   {
     id: 2,
-    title: "Tim Profesional",
-    text: "Dikelola oleh tim yang sudah berpengalaman mengelola Digital Marketing.",
+    title: "Jelaskan kebutuhan Anda",
+    text: "Jelaskan kepada kami keperluan Anda secara detail.",
   },
   {
     id: 3,
-    title: "Harga UMKM",
-    text: "Layanan lengkap dengan harga yang terjangkau untuk UMKM atau bisnis rintisan.",
-  },
-  {
-    id: 4,
-    title: "Handle With Love",
-    text: "Kami akan mengelola Social Media Anda sepenuh hati dengan strategi yang sudah terbukti.",
+    title: "Kami akan menghubungi Anda",
+    text: "Email yang Anda kirim akan kami terima dalam waktu singkat dan akan kami balas secepatnya.",
   },
 ];
 
 export default function WorkFlow() {
   return (
-    <section sx={styles.workflow}>
+    <section sx={{ variant: "section.workflow" }}>
       <Container>
-        <SectionHeaderWorkflow
-          slogan="KAMI MEMBUAT KEHADIRAN DIGITAL UNTUK MERK MODERN"
-          title="Mengapa Harus Kami?"
-          isWhite={true}
+        <SectionHeader
+          title="Bagaimana cara pesannya?"
+          description="Simak cara kerja pemesanan dibawah ini"
         />
 
         <Grid sx={styles.grid}>
@@ -45,8 +35,8 @@ export default function WorkFlow() {
             <Box sx={styles.card} key={item.id}>
               <Box sx={styles.iconBox}>{`0${item.id}`}</Box>
               <Box sx={styles.wrapper}>
-                <Heading sx={styles.wrapper.title}>{item.title}</Heading>
-                <Text sx={styles.wrapper.subTitle}>{item.text}</Text>
+                <Heading sx={{ variant: "text.heading" }}>{item.title}</Heading>
+                <Text sx={styles.wrapper.description}>{item.text}</Text>
               </Box>
             </Box>
           ))}
@@ -57,104 +47,58 @@ export default function WorkFlow() {
 }
 
 const styles = {
-  workflow: {
-    backgroundColor: "primary",
-    backgroundImage: `url(${PatternBG})`,
-    backgroundRepeat: `no-repeat`,
-    backgroundPosition: "center center",
-    backgroundSize: "cover",
-    position: "relative",
-    py: [8, null, 9, null, null, 10],
-  },
   grid: {
+    pt: [0, null, null, null, null, null, null, null, 3],
+    pb: [0, null, null, null, null, null, null, null, 5],
     mb: -1,
-    pt: 0,
     gridGap: [
-      "35px 0",
-      null,
+      "40px",
+      "45px",
       "45px 30px",
       null,
-      "50px 25px",
+      "60px 30px",
+      "50px 40px",
       null,
-      null,
-      "50px 65px",
+      "75px",
     ],
     gridTemplateColumns: [
       "repeat(1,1fr)",
       null,
       "repeat(2,1fr)",
       null,
-      "repeat(4,1fr)",
+      "repeat(3,1fr)",
     ],
   },
   card: {
     display: "flex",
-    flexDirection: "column",
-    position: "relative",
+    flexDirection: ["column", null, null, "row"],
     textAlign: ["center", null, "left"],
-    width: ["100%", "80%", "100%"],
-    mx: ["auto"],
-    px: [4, null, null, 0],
-    "&::before": {
-      position: "absolute",
-      content: '""',
-      top: 0,
-      left: [0, null, null, null, null, 72, null, 90],
-      backgroundRepeat: `no-repeat`,
-      backgroundPosition: "center center",
-      width: 215,
-      height: 60,
-      "@media screen and (max-width:1220px)": {
-        display: "none",
-      },
-    },
-    "&:nth-of-type(2n-1)::before": {
-      backgroundImage: `url(${ArrowOdd})`,
-    },
-    "&:nth-of-type(2n)::before": {
-      backgroundImage: `url(${ArrowEven})`,
-      top: 17,
-    },
-    "&:last-child::before": {
-      display: "none",
-    },
+    px: [0, 5, 0],
   },
 
   iconBox: {
-    width: ["50px", null, "60px", null, null, "70px"],
-    height: ["50px", null, "60px", null, null, "70px"],
     flexShrink: 0,
-    borderRadius: [15, null, 23, null, null, 30],
-    backgroundColor: "white",
-    display: "flex",
-    alignItems: "center",
-    mb: [5, null, null, null, null, 6],
-    mx: ["auto", null, 0],
-    fontSize: [6, null, 7, null, null, "30px"],
-    fontWeight: 700,
-    justifyContent: "center",
-    color: "#2F2E2E",
+    mb: [4, null, null, 0],
+    fontSize: [8, 9, null, null, 10, null, null, 11],
+    fontWeight: 300,
+    fontFamily: "special",
+    color: "heading",
+    lineHeight: 1,
+    letterSpacing: "heading",
+    mr: ["auto", null, 0, 4, null, null, null, 5],
+    ml: ["auto", null, 0],
+    mt: [0, null, null, -1],
   },
   wrapper: {
     width: "100%",
     display: "flex",
     flexDirection: "column",
     mt: "-5px",
-    title: {
-      fontSize: [3, null, 4, null, null, 5],
-      color: "white",
-      lineHeight: [1.4, null, null, null, null, 1.55],
-      pr: [0, null, null, null, null, 2],
-      mb: [2, 3],
-    },
-
-    subTitle: {
-      fontSize: 1,
-      fontWeight: 400,
-      lineHeight: [1.85, null, null, 1.9, 2],
-      color: "white",
-      opacity: 0.75,
-      pr: [0, null, null, null, null, 5],
+    description: {
+      fontSize: [1, 2],
+      fontWeight: "body",
+      lineHeight: 1.9,
+      pt: 2,
     },
   },
 };

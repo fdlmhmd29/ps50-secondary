@@ -1,23 +1,20 @@
 /** @jsx jsx */
-
-// Red Circles
 import { jsx, Container, Flex, Button } from "theme-ui";
 import { keyframes } from "@emotion/react";
 import { Link } from "react-scroll";
-
-// Yellow Circles
 import Logo from "components/logo";
-import LogoDark from "assets/logo.svg";
-import Toggler from "./toggler";
 import { DrawerProvider } from "../../contexts/drawer/drawer.provider";
 import MobileDrawer from "./mobile-drawer";
 import menuItems from "./header.data";
+
+import LogoDark from "assets/logo-dark.svg";
+import Divider from "assets/divider.svg";
 
 export default function Header({ className }) {
   return (
     <DrawerProvider>
       <header sx={styles.header} className={className} id="header">
-        <Container sx={styles.container} id="container">
+        <Container sx={styles.container}>
           <Logo src={LogoDark} />
 
           <Flex as="nav" sx={styles.nav}>
@@ -35,8 +32,19 @@ export default function Header({ className }) {
               </Link>
             ))}
           </Flex>
-
-          <Toggler />
+          <a
+            sx={{ textDecoration: "none" }}
+            target="_blank"
+            href="https://us8.list-manage.com/contact-form?u=2a1f277b33d0f3f94c94184e4&form_id=e68c7f5368b6244e1bd2fa16ad74e424"
+          >
+            <Button
+              className="donate__btn"
+              variant="secondary"
+              aria-label="Get Started"
+            >
+              Hubungi Kami
+            </Button>
+          </a>
 
           <MobileDrawer />
         </Container>
@@ -60,24 +68,43 @@ const positionAnim = keyframes`
 
 const styles = {
   header: {
-    color: "text",
-    fontWeight: "body",
-    py: "10px",
+    py: [4, null, 5],
     width: "100%",
     position: "absolute",
     top: 0,
     left: 0,
-    backgroundColor: "background",
+    backgroundColor: "transparent",
     transition: "all 0.4s ease",
     animation: `${positionAnim} 0.4s ease`,
+    ".donate__btn": {
+      flexShrink: 0,
+      mr: [15, 20, null, null, 0],
+      ml: ["auto", null, null, null, 0],
+      backgroundImage: ["none", null, null, null, `url(${Divider})`],
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center bottom",
+      backgroundSize: "contain",
+      backgroundColor: ["#FEEDEF", null, null, null, "transparent"],
+      color: "primary",
+      fontWeight: "bold",
+      py: ["12px", null, null, null, 2],
+      px: [3, null, null, null, 0],
+      ":hover": {
+        backgroundColor: ["primary", null, null, null, "transparent"],
+        color: ["white", null, null, null, "primary"],
+      },
+    },
     "&.sticky": {
       position: "fixed",
       backgroundColor: "background",
-      color: "#000000",
+      color: "heading",
       boxShadow: "0 1px 2px rgba(0, 0, 0, 0.06)",
-      py: 3,
+      py: "20px",
       "nev > a": {
-        color: "text",
+        color: "heading",
+      },
+      ".donate__btn": {
+        border: "0px solid",
       },
     },
   },
@@ -85,28 +112,24 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    px: ["24px", "34px", null, "50px", "50px", "100px", "30px", "0px"],
   },
   nav: {
-    mx: "auto",
+    ml: "auto",
+    mr: 6,
     display: "none",
     "@media screen and (min-width: 1024px)": {
       display: "block",
     },
     a: {
-      color: "navToggled",
-      fontSize: 2,
-      fontWeight: "bold",
-      px: 5,
+      fontSize: "16px",
+      fontWeight: "heading",
+      px: 20,
       cursor: "pointer",
       lineHeight: "1.2",
       transition: "all 0.15s",
-      "&:hover": {
-        color: "primary",
-      },
+      color: "heading",
       "&.active": {
         color: "primary",
-        fontWeight: "bold",
       },
     },
   },

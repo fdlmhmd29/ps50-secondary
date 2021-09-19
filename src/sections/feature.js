@@ -3,49 +3,44 @@ import { jsx } from "theme-ui";
 import { Container, Grid } from "theme-ui";
 import SectionHeader from "components/section-header";
 import FeatureCard from "components/feature-card.js";
-import Performance from "assets/feature/performance.svg";
-import Partnership from "assets/feature/partnership.svg";
-import Subscription from "assets/feature/subscription.svg";
-import Support from "assets/feature/support.svg";
+import Marketplace from "assets/feature/marketplace.svg";
+import Gift from "assets/feature/gift.svg";
+import Award from "assets/feature/award.svg";
 
 const data = [
   {
     id: 1,
-    imgSrc: Performance,
-    altText: "Social Media Engagement",
-    title: "Social Media Engagement",
-    text: "Layanan peningkatkan interaksi akun seperti Followers, Subscribers, Likes, dan Views secara instant untuk menambah kepercayaan konsumen dan interaksi organic terhadap brand Anda di Social Media.",
+    imgSrc: Marketplace,
+    altText: "Marketplace",
+    title: "Mengembangkan Target Pasar",
+    text: "Dengan Sosial Media, Anda dapat menentukan siapa saja calon konsumen yang akan melihat konten promosi di Sosial Media agar sesuai dengan tujuan.",
   },
   {
     id: 2,
-    imgSrc: Partnership,
-    altText: "Branding & Design",
-    title: "Branding & Design",
-    text: "Layanan pembuatan konten digital untuk keperluan Branding dan Marketing dengan gaya kekinian dan Ter up-to-date di Social Media.",
+    imgSrc: Gift,
+    altText: "Gift",
+    title: "Meningkatkan Profit",
+    text: "Dengan strategi marketing iklan dan alur order yang tepat di sosial media, maka pelanggan potensial akan lebih mudah dikonversi.",
   },
   {
     id: 3,
-    imgSrc: Subscription,
-    altText: "Digital Campaign",
-    title: "Digital Campaign",
-    text: "Layanan manajemen iklan/campaign diberbagai Social Media dengan riset yang mendalam menggunakan cara paling efektif dan efisien untuk mencapai Goal Marketing Anda!",
-  },
-  {
-    id: 4,
-    imgSrc: Support,
-    altText: "eMarketplace Engagement",
-    title: "eMarketplace Engagement",
-    text: "Layanan manajemen eMarketplace dengan riset yang mendalam menggunakan cara paling efektif dan efisien untuk mencapai Goal Marketing Anda!",
+    imgSrc: Award,
+    altText: "Awards",
+    title: "Meningkatkan Brand Awareness",
+    text: "Dengan melakukan manajemen social media yang tepat, value dari brand Anda akan meningkat diiringi dengan Brand Awareness yang bagus.",
   },
 ];
 
 export default function Feature() {
   return (
-    <section sx={{ variant: "section.feature" }}>
+    <section
+      sx={{ backgroundColor: "white", variant: "section.feature" }}
+      id="feature"
+    >
       <Container>
         <SectionHeader
-          slogan="Layanan Lainnya"
-          title="Me-Maximalkan brand Anda"
+          title="Murah tanpa Ribet"
+          description="Miliki manajer Sosial Media profesional dengan harga terjangkau yang akan:"
         />
 
         <Grid sx={styles.grid}>
@@ -53,7 +48,7 @@ export default function Feature() {
             <FeatureCard
               key={item.id}
               src={item.imgSrc}
-              alt={item.altText}
+              alt={item.title}
               title={item.title}
               text={item.text}
             />
@@ -66,18 +61,24 @@ export default function Feature() {
 
 const styles = {
   grid: {
-    pt: [0, null, null, null, null, null, 2],
-    px: [5, 6, 0, null, 7, 8, 7],
+    pt: [0, null, null, null, null, null, null, null, 4],
+    pb: [0, null, null, null, null, null, null, null, 6],
     gridGap: [
-      "40px 0",
-      null,
+      "40px",
+      "45px",
       "45px 30px",
       null,
-      "60px 50px",
-      "70px 50px",
+      "60px 30px",
+      "50px 40px",
       null,
-      "80px 90px",
+      "75px",
     ],
-    gridTemplateColumns: ["repeat(1,1fr)", null, "repeat(2,1fr)"],
+    gridTemplateColumns: [
+      "repeat(1,1fr)",
+      null,
+      "repeat(2,1fr)",
+      null,
+      "repeat(3,1fr)",
+    ],
   },
 };

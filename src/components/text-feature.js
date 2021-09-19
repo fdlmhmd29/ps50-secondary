@@ -1,77 +1,94 @@
 /** @jsx jsx */
-import { jsx, Box, Heading, Text, Button, Link } from "theme-ui";
+import { jsx, Box, Heading, Text, Button, Link } from 'theme-ui';
+import List from 'components/list';
+import { IoIosArrowForward } from 'react-icons/io';
 
 export default function TextFeature({
-  subTitle,
   title,
   description,
+  points,
   btnName,
-  btnURL = "#",
+  btnURL,
 }) {
   return (
     <Box sx={styles.card}>
       <Box sx={styles.wrapper}>
-        <Text as="p" sx={styles.wrapper.subTitle}>
-          {subTitle}
-        </Text>
         <Heading as="h2" sx={styles.wrapper.title}>
           {title}
         </Heading>
-      </Box>
-
-      {description ? (
-        <Text as="p" className="description" sx={styles.description}>
+        <Text as="p" className="description" sx={styles.wrapper.description}>
           {description}
         </Text>
-      ) : undefined}
+      </Box>
+      {points && <List items={points} childStyle={styles.listItem} />}
 
-      {btnName ? (
-        <Link href={btnURL} variant="default">
-          <Button variant="primary">{btnName}</Button>
+      {btnName && (
+        <Link href={btnURL} variant="default" className="btn__link">
+          <Button variant="secondary" aria-label={btnName}>
+            {btnName}&nbsp;
+            <IoIosArrowForward />
+          </Button>
         </Link>
-      ) : undefined}
+      )}
     </Box>
   );
 }
 
 const styles = {
   card: {
-    display: "flex",
-    alignItems: "flex-start",
-    flexDirection: "column",
+    display: 'flex',
+    alignItems: 'flex-start',
+    flexDirection: 'column',
     flexShrink: 0,
-    a: {
-      m: ["0 auto", null, null, 0],
+    '.btn__link': {
+      mx: ['auto', null, null, 0],
+    },
+    '.list__box': {
+      pt: [5, null, null, null, 6],
+      width: '100%',
     },
   },
   wrapper: {
-    width: "100%",
-    display: "flex",
-    flexDirection: "column",
-    mt: -1,
-    subTitle: {
-      fontSize: [0, null, 1],
-      color: "text",
-      textTransform: "uppercase",
-      fontWeight: "700",
-      mb: [2, 3],
-      lineHeight: 1.5,
-      letterSpacing: ["1.5px", null, "2px"],
-    },
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    mt: [-2, null, null, null, -3],
     title: {
-      fontSize: ["24px", null, "28px", "30px", "36px", "42px", null, "48px"],
-      color: "primary",
-      lineHeight: [1.3, null, null, null, 1.2],
-      fontWeight: "700",
-      letterSpacing: "-.5px",
-      mb: 5,
+      fontSize: [6, 7, 8, null, 9, null, 10],
+      color: 'heading',
+      lineHeight: [1.4, 1.45],
+      fontWeight: 'body',
+      fontFamily: 'heading',
+      letterSpacing: 'heading',
+      mb: [3, 4],
+      px: [0, null, 7, 0],
+    },
+    description: {
+      fontSize: [1, 2, null, null, '17px'],
+      color: 'text_secondary',
+      fontWeight: 'body',
+      lineHeight: [1.9, 2, null, null, 2.2],
+      px: [0, null, 7, 0],
     },
   },
-  description: {
-    fontSize: ["15px", 2, null, null, null, "17px", null, 3],
-    fontWeight: 400,
-    lineHeight: [1.85, null, null, 2, null, "2.2"],
-    color: "text",
-    mb: "30px",
+  listItem: {
+    fontWeight: 'heading',
+    fontSize: [1, null, null, null, 2],
+    lineHeight: 1.75,
+    marginBottom: [2, null, null, null, 3],
+    alignItems: 'flex-start',
+    justifyContent: ['center', null, null, 'flex-start'],
+    color: 'text_secondary',
+    '.list__icon': {
+      width: [25, 30],
+      height: 'auto',
+      color: '#3FDBB1',
+      padding: 0,
+      fontSize: [2, 4],
+      marginLeft: '-1px',
+      flexShrink: 0,
+      justifyContent: 'flex-start',
+      marginTop: '4px',
+    },
   },
 };
