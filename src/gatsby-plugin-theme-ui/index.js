@@ -3,13 +3,13 @@ export default {
   colors: {
     text: "#343D48", // body color and primary color
     text_secondary: "#02073E", // secondary body color
-    heading: "#0F2137", // primary heading color
+    heading: "#F94962", // primary heading color
     heading_secondary: "#02073E", // heading color
     background: "#FFFFFF", // body background color
     background_secondary: "#F9FAFC", // secondary background color
     border_color: "#E5ECF4", // border color
     primary: "#F94962", // primary button and link color
-    secondary: "#3183FF", // secondary color - can be used for hover states
+    secondary: "#0367FF", // secondary color - can be used for hover states
     muted: "#7B8188", // muted color
     accent: "#609", // a contrast color for emphasizing UI
     yellow: "#F6C416",
@@ -136,7 +136,7 @@ export default {
       color: "heading",
     },
     heroPrimary: {
-      color: "heading_secondary",
+      color: "heading",
       fontSize: ["34px", 10, 11, 12, 11, 12, 13, 14],
       lineHeight: [1.3, 1.25],
       fontWeight: "body",
@@ -253,12 +253,13 @@ export default {
       variant: "buttons.defaultBtn",
       backgroundColor: "primary",
       flexShrink: 0,
-      ml: [2, 3],
+      ml: [0, 0],
       padding: ["10px 20px", "12px 30px"],
       fontSize: [1, 2, 3],
       fontWeight: "bold",
       "&:hover": {
         boxShadow: "rgba(249, 84, 84, 0.3) 0px 9px 20px -5px",
+        backgroundColor: "#0367FF",
       },
     },
     secondary: {

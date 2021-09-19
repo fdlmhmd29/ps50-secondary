@@ -73,7 +73,7 @@ export default [
         icon: <FaTwitter />,
       },
       {
-        path: "/",
+        path: "https://github.com/fdlmhmd29",
         label: "Github",
         name: "github",
         icon: <FaGithub />,

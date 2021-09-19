@@ -9,7 +9,7 @@ export default [
   },
   {
     path: "feedback",
-    label: "Umpan balik",
+    label: "Tim",
   },
   {
     path: "support",

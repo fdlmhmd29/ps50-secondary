@@ -17,7 +17,7 @@ export default function IndexPage() {
   return (
     <StickyProvider>
       <Layout>
-        <SEO title="Pengelola Sosial Media bisnis" />
+        <SEO title="Pengelola Sosial Media Bisnis" />
         <Banner />
         <Feature />
         <BusinessProfit />

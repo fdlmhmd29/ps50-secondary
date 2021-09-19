@@ -37,7 +37,11 @@ export default function Banner() {
     {
       placeholderImage: file(relativePath: { eq: "banner-thumb.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 740, layout: CONSTRAINED)
+          gatsbyImageData(
+            width: 1480
+            layout: CONSTRAINED
+            placeholder: BLURRED
+          )
         }
       }
     }
@@ -51,8 +55,10 @@ export default function Banner() {
           </Heading>
           <Text as="p" variant="heroSecondary">
             Layanan lengkap manajemen akun Sosial Media mulai dari Pembuatan
-            Konten, Optimisasi, Marketing dan Manajemen.
+            Konten, Optimisasi, Marketing dan Manajemen yang terjangkau. Serius,
+            tidak mahal! Tertarik? Segera hubungi Max More
           </Text>
+          <Text as="p" variant="heroSecondary"></Text>
           <Subscribe />
           {/* <Flex sx={styles.sponsorBox}>
             <Text sx={styles.sponsorTitle}>Klien kami:</Text>
@@ -110,7 +116,7 @@ const styles = {
       mb: [-2, null],
       width: [330, "100%", null, null, 480, 640, 670, 760],
       img: {
-        height: [360, "auto"],
+        height: ["auto", "auto"],
       },
     },
   },

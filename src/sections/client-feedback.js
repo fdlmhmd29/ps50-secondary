@@ -11,7 +11,11 @@ export default function ClientFeedback() {
     {
       placeholderImage: file(relativePath: { eq: "client-thumb.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 890, layout: CONSTRAINED)
+          gatsbyImageData(
+            width: 1480
+            layout: CONSTRAINED
+            placeholder: BLURRED
+          )
         }
       }
     }

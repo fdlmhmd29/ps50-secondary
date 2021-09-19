@@ -31,7 +31,11 @@ export default function BusinessProfit() {
     {
       placeholderImage: file(relativePath: { eq: "business-profit.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 685, layout: CONSTRAINED)
+          gatsbyImageData(
+            width: 1480
+            layout: CONSTRAINED
+            placeholder: BLURRED
+          )
         }
       }
     }
@@ -39,7 +43,7 @@ export default function BusinessProfit() {
   return (
     <section sx={{ variant: "section.profit" }}>
       <Container sx={styles.containerBox}>
-        <Box sx={styles.thumbnail}>
+        <Box id="thumbnail" sx={styles.thumbnail}>
           <GatsbyImage
             image={dataThumb.placeholderImage.childImageSharp.gatsbyImageData}
           />
@@ -78,7 +82,7 @@ const styles = {
     width: [328, "100%", null, null, 560, 690, 805],
     img: {
       ml: [0, null, null, -3],
-      height: [265, "auto"],
+      height: ["auto", "auto"],
     },
   },
   contentBox: {

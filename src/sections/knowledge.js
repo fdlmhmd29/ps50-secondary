@@ -18,7 +18,11 @@ export default function Knowledge() {
     {
       placeholderImage: file(relativePath: { eq: "knowledge-thumb.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 630, layout: CONSTRAINED)
+          gatsbyImageData(
+            width: 1480
+            layout: CONSTRAINED
+            placeholder: BLURRED
+          )
         }
       }
     }
@@ -58,7 +62,7 @@ const styles = {
     mx: ["auto", null, null, 0],
     width: [338, "100%", null, null, 540, 730, 670, 760],
     img: {
-      height: [400, "auto"],
+      height: ["auto", "auto"],
     },
   },
   contentBox: {

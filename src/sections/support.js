@@ -9,9 +9,13 @@ export default function Support() {
   // Graphql image query
   const dataThumb = useStaticQuery(graphql`
     {
-      placeholderImage: file(relativePath: { eq: "support-thumb.jpg" }) {
+      placeholderImage: file(relativePath: { eq: "support-thumb.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 990, layout: CONSTRAINED)
+          gatsbyImageData(
+            width: 2346
+            layout: CONSTRAINED
+            placeholder: BLURRED
+          )
         }
       }
     }
@@ -40,7 +44,7 @@ const styles = {
     justifyContent: "center",
     width: [360, "100%", null, null, 960, "100%"],
     img: {
-      height: [180, "auto"],
+      height: ["auto", "auto"],
     },
   },
 };

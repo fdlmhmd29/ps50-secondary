@@ -32,7 +32,7 @@ export default function Header({ className }) {
               </Link>
             ))}
           </Flex>
-          <a
+          {/* <a
             sx={{ textDecoration: "none" }}
             target="_blank"
             href="https://us8.list-manage.com/contact-form?u=2a1f277b33d0f3f94c94184e4&form_id=e68c7f5368b6244e1bd2fa16ad74e424"
@@ -44,7 +44,7 @@ export default function Header({ className }) {
             >
               Hubungi Kami
             </Button>
-          </a>
+          </a> */}
 
           <MobileDrawer />
         </Container>
@@ -115,7 +115,6 @@ const styles = {
   },
   nav: {
     ml: "auto",
-    mr: 6,
     display: "none",
     "@media screen and (min-width: 1024px)": {
       display: "block",
@@ -127,7 +126,10 @@ const styles = {
       cursor: "pointer",
       lineHeight: "1.2",
       transition: "all 0.15s",
-      color: "heading",
+      color: "text_secondary",
+      "&:hover": {
+        color: "#0367FF",
+      },
       "&.active": {
         color: "primary",
       },
