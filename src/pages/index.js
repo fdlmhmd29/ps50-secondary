@@ -1,9 +1,11 @@
 import React from "react";
+import "assets/swiper/swiper-bundle.min.css";
 import { StickyProvider } from "../contexts/app/app.provider";
 import SEO from "components/seo";
 import Layout from "components/layout";
 import Banner from "../sections/banner";
 import Feature from "../sections/feature";
+import Testimonials from "sections/testimonials";
 import BusinessProfit from "../sections/business-profit";
 import Knowledge from "../sections/knowledge";
 import ClientFeedback from "../sections/client-feedback";
@@ -24,6 +26,7 @@ export default function IndexPage() {
         <Knowledge />
         <ClientFeedback />
         <WorkFlow />
+        <Testimonials />
         <Support />
       </Layout>
     </StickyProvider>
