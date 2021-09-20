@@ -6,8 +6,8 @@ import SectionHeader from "components/section-header";
 const data = [
   {
     id: 1,
-    title: "Daftar menggunakan Email",
-    text: "Email yang Anda gunakan untuk mendaftar akan kami gunakan sebagai sarana untuk menghubungi Anda.",
+    title: "Isi Formulir",
+    text: "Silahkan isi formulir yang telah disediakan dengan mengklik tombol Hubungi Kami dibawah ini.",
   },
   {
     id: 2,
@@ -29,7 +29,6 @@ export default function WorkFlow() {
           title="Bagaimana cara pesannya?"
           description="Simak cara kerja pemesanan dibawah ini"
         />
-
         <Grid sx={styles.grid}>
           {data.map((item) => (
             <Box sx={styles.card} key={item.id}>
