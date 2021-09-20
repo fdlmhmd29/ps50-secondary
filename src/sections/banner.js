@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import { Container, Flex, Box, Heading, Text, Image } from "theme-ui";
-import { Link } from "components/link";
+import { Container, Flex, Box, Heading, Text } from "theme-ui";
+
 import Subscribe from "components/subscribe";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql } from "gatsby";
