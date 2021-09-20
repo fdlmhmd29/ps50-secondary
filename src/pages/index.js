@@ -5,6 +5,7 @@ import SEO from "components/seo";
 import Layout from "components/layout";
 import Banner from "../sections/banner";
 import Feature from "../sections/feature";
+import MessengerCustomerChat from "react-messenger-customer-chat";
 import Testimonials from "sections/testimonials";
 import BusinessProfit from "../sections/business-profit";
 import Knowledge from "../sections/knowledge";
@@ -19,6 +20,10 @@ export default function IndexPage() {
   return (
     <StickyProvider>
       <Layout>
+        <MessengerCustomerChat
+          pageId="108480218255046"
+          appId="592558242094391"
+        />
         <SEO title="Pengelola Sosial Media Bisnis" />
         <Banner />
         <Feature />

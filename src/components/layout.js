@@ -3,7 +3,7 @@ import { jsx } from "theme-ui";
 import React, { useState } from "react";
 import Sticky from "react-stickynode";
 import Header from "./header/header";
-import MessengerCustomerChat from "react-messenger-customer-chat";
+
 import Footer from "./footer/footer";
 export default function Layout({ children }) {
   const [isSticky, setIsSticky] = useState(false);
@@ -27,7 +27,6 @@ export default function Layout({ children }) {
         {children}
       </main>
       <Footer />
-      <MessengerCustomerChat pageID="108480218255046" />
     </React.Fragment>
   );
 }
