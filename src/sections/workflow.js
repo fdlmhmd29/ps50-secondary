@@ -17,7 +17,7 @@ const data = [
   {
     id: 3,
     title: "Kami akan menghubungi Anda",
-    text: "Email yang Anda kirim akan kami terima dalam waktu singkat dan akan kami balas secepatnya.",
+    text: "Formulir yang Anda kirim akan kami terima dalam waktu singkat dan akan kami balas secepatnya.",
   },
 ];
 
@@ -27,7 +27,7 @@ export default function WorkFlow() {
       <Container>
         <SectionHeader
           title="Bagaimana cara pesannya?"
-          description="Simak cara kerja pemesanan dibawah ini"
+          description="Simak caranya dibawah ini"
         />
         <Grid sx={styles.grid}>
           {data.map((item) => (
