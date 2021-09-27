@@ -9,6 +9,7 @@ import MessengerCustomerChat from "react-messenger-customer-chat";
 import Testimonials from "sections/testimonials";
 import BusinessProfit from "../sections/business-profit";
 import Knowledge from "../sections/knowledge";
+import Pricing from "sections/pricing";
 import ClientFeedback from "../sections/client-feedback";
 import WorkFlow from "../sections/workflow";
 import Support from "../sections/support";
@@ -30,6 +31,7 @@ export default function IndexPage() {
         <BusinessProfit />
         <Knowledge />
         <ClientFeedback />
+        <Pricing />
         <WorkFlow />
         <Testimonials />
         <Support />

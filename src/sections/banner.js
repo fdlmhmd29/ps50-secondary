@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import { Container, Flex, Box, Heading, Text } from "theme-ui";
+import { Container, Box, Heading, Text } from "theme-ui";
 
 import Subscribe from "components/subscribe";
 import { GatsbyImage } from "gatsby-plugin-image";
@@ -60,18 +60,7 @@ export default function Banner() {
           </Text>
           <Text as="p" variant="heroSecondary"></Text>
           <Subscribe />
-          {/* <Flex sx={styles.sponsorBox}>
-            <Text sx={styles.sponsorTitle}>Klien kami:</Text>
-            <Box sx={styles.sponsorBox.sponsor}>
-              {data.map((item, index) => (
-                <Link path={item.path} key={`client-key${index}`}>
-                  <Image src={item.image} alt={item.title} />
-                </Link>
-              ))}
-            </Box>
-          </Flex> */}
         </Box>
-
         <Box sx={styles.banner.imageBox}>
           <GatsbyImage
             image={dataThumb.placeholderImage.childImageSharp.gatsbyImageData}

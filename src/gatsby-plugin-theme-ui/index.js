@@ -13,17 +13,6 @@ export default {
     muted: "#7B8188", // muted color
     accent: "#609", // a contrast color for emphasizing UI
     yellow: "#F6C416",
-
-    // highlight	a background color for highlighting text
-    // modes: {
-    //   dark: {
-    //     text: "#fff",
-    //     background: "#000",
-    //     primary: "#0cf",
-    //     secondary: "#09c",
-    //     muted: "#111",
-    //   },
-    // },
   },
   breakpoints: [
     "480px",
@@ -214,7 +203,7 @@ export default {
     }, // default variant for MenuButton
     // you can reference other values defined in the theme
     defaultBtn: {
-      borderRadius: "6px",
+      borderRadius: "12px",
       fontSize: [1, 2],
       letterSpacings: "-0.15px",
       padding: ["10px 15px", "13px 30px"],
@@ -299,7 +288,7 @@ export default {
   cards: {
     primary: {
       padding: 2,
-      borderRadius: 4,
+      borderRadius: 12,
     },
     offer: {
       display: "flex",
