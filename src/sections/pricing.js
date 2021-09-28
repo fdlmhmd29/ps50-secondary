@@ -11,7 +11,7 @@ const data = [
   {
     id: 1,
     title: "Paket Lite",
-    subtitle: "Untuk mereka yang baru mau mencoba",
+    subtitle: "Cocok untuk dicoba",
     amount: {
       monthly: 149000,
       annual: 34000 * 4,
@@ -23,12 +23,12 @@ const data = [
         id: 1,
         isAvailable: true,
         title:
-          "Mendapatkan 8 design (6 postingan feed dan 2 Instagram Stories)",
+          "Mendapatkan 8 design (6 feed dan 2 Stories)",
       },
       {
         id: 2,
         isAvailable: true,
-        title: `Konsep desain ditentukan oleh Max More`,
+        title: `Konsep desain ditentukan kami`,
       },
       {
         id: 3,
@@ -50,7 +50,7 @@ const data = [
   {
     id: 2,
     title: "Paket Standar",
-    subtitle: "For the Pro users who work with modern data stack",
+    subtitle: "Cocok untuk pemula",
     amount: {
       monthly: 299000,
       annual: 69300 * 4,
@@ -62,7 +62,7 @@ const data = [
         id: 1,
         isAvailable: true,
         title:
-          "Mendapatkan 12 design (9 postingan feed dan 3 Instagram Stories)",
+          "Mendapatkan 12 design (9 feed dan 3 Stories)",
       },
       {
         id: 2,
@@ -89,7 +89,7 @@ const data = [
   {
     id: 3,
     title: "Paket Premium",
-    subtitle: "For the Pro users who work with modern data stack",
+    subtitle: "Cocok untuk yang sudah berpengalaman",
     amount: {
       monthly: 599000,
       annual: 129900 * 4,
@@ -101,12 +101,12 @@ const data = [
         id: 1,
         isAvailable: true,
         title:
-          "Mendapatkan 20 design (15 postingan feed dan 5 Instagram Stories)",
+          "Mendapatkan 20 design (15 feed dan 5 Stories)",
       },
       {
         id: 2,
         isAvailable: true,
-        title: `Semua yang ada pada paket Lite & Standar`,
+        title: `Termasuk paket Lite & Standar`,
       },
       {
         id: 3,
@@ -139,8 +139,8 @@ const Pricing = () => {
       <Container>
         <SectionHeader
           sx={styles.heading}
-          title="What deal suit you perfect"
-          description="Meet our pricing plan"
+          title="Info harga paket"
+          description="Daftar harga dan detil keuntungan pada setiap paketnya"
         />
         <Flex sx={styles.priceSwitcher}>
           <Text as="span">Semingguan</Text>
@@ -222,6 +222,7 @@ const styles = {
   },
   priceWrapper: {
     display: ["block", null, null, "flex"],
+    mb: 0,
     alignItems: "center",
     justifyContent: "center",
     ".priceCard": {

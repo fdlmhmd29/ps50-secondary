@@ -47,7 +47,7 @@ export default function WorkFlow() {
 
 const styles = {
   grid: {
-    pt: [0, null, null, null, null, null, null, null, 3],
+    pt: [0, null, null, null, null, null, null, null, 1],
     pb: [0, null, null, null, null, null, null, null, 5],
     mb: -1,
     gridGap: [

@@ -81,7 +81,8 @@ export default {
       py: [8, null, 9, null, null, 10],
     },
     workflow: {
-      py: [8, null, 9, null, null, 10],
+      pt: [5, null, 9, null, null, 1],
+      pb: [8, null, 9, null, null, 10],
       backgroundColor: "background_secondary",
     },
     support: {
