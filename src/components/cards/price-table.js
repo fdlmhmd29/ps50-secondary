@@ -44,7 +44,7 @@ const PriceTable = ({ price, isAnnual }) => {
         <a
           sx={{ textDecoration: "none" }}
           target="_blank"
-          href="https://wa.me/6285156935824?text=Tolong%20info%20paket-nya%20dong%20Kak,%20terimakasih."
+          href="https://forms.gle/uSQxmq1nVfdKL7Ev7"
         >
           <Button sx={styles.button} variant="primaryMd">
             {price.buttonText}
