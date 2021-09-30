@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Container, Flex, Button } from "theme-ui";
+import { jsx, Container, Flex } from "theme-ui";
 import { keyframes } from "@emotion/react";
 import { Link } from "react-scroll";
 import Logo from "components/logo";
@@ -32,20 +32,6 @@ export default function Header({ className }) {
               </Link>
             ))}
           </Flex>
-          {/* <a
-            sx={{ textDecoration: "none" }}
-            target="_blank"
-            href="https://us8.list-manage.com/contact-form?u=2a1f277b33d0f3f94c94184e4&form_id=e68c7f5368b6244e1bd2fa16ad74e424"
-          >
-            <Button
-              className="donate__btn"
-              variant="secondary"
-              aria-label="Get Started"
-            >
-              Hubungi Kami
-            </Button>
-          </a> */}
-
           <MobileDrawer />
         </Container>
       </header>

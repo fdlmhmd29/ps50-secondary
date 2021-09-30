@@ -2,23 +2,27 @@
 import React from "react";
 import { jsx } from "theme-ui";
 import { Button } from "theme-ui";
+import { Link } from "react-scroll";
 
 export default function Subscribe() {
   return (
     <div className="subscribe__area">
-      <a
-        sx={{ textDecoration: "none" }}
-        target="_blank"
-        href="https://forms.gle/KxPpnjPtr3yrPSt46"
+      <Link
+        activeClass="active"
+        to="feature"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
       >
         <Button
           className="subscribe_button"
           variant="subscribeButton"
           aria-label="Get Started"
         >
-          Hubungi Kami
+          Pelajari selengkapnya
         </Button>
-      </a>
+      </Link>
     </div>
   );
 }
