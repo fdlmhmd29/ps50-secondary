@@ -116,8 +116,8 @@ const styles = {
       "&.facebook > svg": {
         color: "#3B5998",
       },
-      "&.twitter > svg": {
-        color: "#55ACEE",
+      "&.instagram > svg": {
+        color: "#F56040",
       },
       "&.github > svg": {
         color: "#161614",

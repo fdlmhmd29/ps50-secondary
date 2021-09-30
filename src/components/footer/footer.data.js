@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaGithub, FaDribbble } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaGithub, FaDribbble } from "react-icons/fa";
 
 export default [
   {
@@ -58,32 +58,32 @@ export default [
     ],
   },
   {
-    header: "Kontak",
+    header: "Sosial Media ",
     items: [
       {
-        path: "/",
+        path: "https://www.facebook.com/maxmore.id",
         label: "Facebook",
         name: "facebook",
         icon: <FaFacebook />,
       },
       {
-        path: "/",
-        label: "Twitter",
-        name: "twitter",
-        icon: <FaTwitter />,
+        path: "https://www.instagram.com/maxmore.co/",
+        label: "Instagram",
+        name: "instagram",
+        icon: <FaInstagram />,
       },
-      {
-        path: "https://github.com/fdlmhmd29",
-        label: "Github",
-        name: "github",
-        icon: <FaGithub />,
-      },
-      {
-        path: "/",
-        label: "Dribbble",
-        name: "dribbble",
-        icon: <FaDribbble />,
-      },
+      // {
+      //   path: "https://github.com/fdlmhmd29",
+      //   label: "Github",
+      //   name: "github",
+      //   icon: <FaGithub />,
+      // },
+      // {
+      //   path: "/",
+      //   label: "Dribbble",
+      //   name: "dribbble",
+      //   icon: <FaDribbble />,
+      // },
     ],
   },
 ];
