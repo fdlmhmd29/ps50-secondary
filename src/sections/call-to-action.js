@@ -16,8 +16,8 @@ export default function CallToAction() {
           </Heading>
           <Box sx={styles.btnWrapper}>
             <a target="_blank" href="https://forms.gle/KxPpnjPtr3yrPSt46">
-              <Button variant="whiteButton" aria-label="Contact Us">
-                HUBUNGI KAMI SEKARANG
+              <Button variant="whatsappButton" aria-label="Contact Us">
+                WhatsApp
               </Button>
             </a>
           </Box>

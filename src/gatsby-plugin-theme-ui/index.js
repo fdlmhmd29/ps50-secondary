@@ -225,6 +225,20 @@ export default {
         boxShadow: "rgba(31, 62, 118, 0.57) 0px 9px 20px -5px",
       },
     },
+    whatsappButton: {
+      variant: "buttons.defaultBtn",
+      color: "white",
+      padding: ["15px 20px", null, "17px 20px 16px", null, "20px 30px"],
+      bg: "#25D366",
+      fontWeight: "bold",
+      letterSpacing: "1px",
+      transition: "all 0.35s",
+      fontSize: [0, "13px", null, null, 1],
+      "&:hover": {
+        backgroundColor: "primary",
+        color: "white",
+      },
+    },
     whiteButton: {
       variant: "buttons.defaultBtn",
       color: "heading_secondary",
