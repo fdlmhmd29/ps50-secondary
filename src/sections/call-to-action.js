@@ -15,7 +15,10 @@ export default function CallToAction() {
             Punya pertanyaan? Jangan ragu untuk bertanya
           </Heading>
           <Box sx={styles.btnWrapper}>
-            <a target="_blank" href="https://forms.gle/KxPpnjPtr3yrPSt46">
+            <a
+              target="_blank"
+              href="https://wa.me/6285156935824?text=Tolong%20info%20paketnya%20Kak,%20Terimakasih."
+            >
               <Button variant="whatsappButton" aria-label="Contact Us">
                 WhatsApp
               </Button>

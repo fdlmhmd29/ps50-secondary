@@ -17,8 +17,8 @@ export default function Footer() {
               <Logo src={FooterLogo} />
             </Box>
             <nav className="footer__menu">
-              <Link path="/" label="Terms of use" />
-              <Link path="/" label="Privacy" />
+              <Link path="/kebijakan-layanan" label="Kebijakan Layanan" />
+              <Link path="/privasi" label="Privacy" />
             </nav>
             <Text as="p" sx={styles.copyrightArea.copyright}>
               Copyright by 2021 Max More

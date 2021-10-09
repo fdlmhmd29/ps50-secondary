@@ -2,5 +2,11 @@
   "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
-  "editor.fontFamily": "Cascadia Code"
+  "editor.fontFamily": "Cascadia Code",
+  "files.associations": {
+    "*.md": "mdx"
+  },
+  "[mdx]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  }
 }

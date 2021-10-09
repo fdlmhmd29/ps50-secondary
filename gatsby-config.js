@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Max More - Digital Agency`,
+    title: `Max More Studio`,
     description: `Max more merupakan sebuah layanan manajerial berbasis Digital Agency untuk membantu para pelaku usaha UMKM dalam mengembangkan bisnis mereka.`,
     author: `@gatsbyjs`,
   },
@@ -20,7 +20,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Maxmore - Digital Agency`,
+        name: `Max More Studio`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
