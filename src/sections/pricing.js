@@ -22,8 +22,7 @@ const data = [
       {
         id: 1,
         isAvailable: true,
-        title:
-          "Mendapatkan 8 design (6 feed dan 2 Stories)",
+        title: "Mendapatkan 8 design (6 feed dan 2 Stories)",
       },
       {
         id: 2,
@@ -61,8 +60,7 @@ const data = [
       {
         id: 1,
         isAvailable: true,
-        title:
-          "Mendapatkan 12 design (9 feed dan 3 Stories)",
+        title: "Mendapatkan 12 design (9 feed dan 3 Stories)",
       },
       {
         id: 2,
@@ -100,8 +98,7 @@ const data = [
       {
         id: 1,
         isAvailable: true,
-        title:
-          "Mendapatkan 20 design (15 feed dan 5 Stories)",
+        title: "Mendapatkan 20 design (15 feed dan 5 Stories)",
       },
       {
         id: 2,

@@ -6,31 +6,6 @@ import Subscribe from "components/subscribe";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql } from "gatsby";
 
-import client1 from "assets/sponsor/paypal.svg";
-import client2 from "assets/sponsor/google.svg";
-import client3 from "assets/sponsor/dropbox.svg";
-
-const data = [
-  {
-    id: 1,
-    path: "#",
-    image: client1,
-    title: "paypal",
-  },
-  {
-    id: 2,
-    path: "#",
-    image: client2,
-    title: "google",
-  },
-  {
-    id: 3,
-    path: "#",
-    image: client3,
-    title: "dropbox",
-  },
-];
-
 export default function Banner() {
   // Graphql image query
   const dataThumb = useStaticQuery(graphql`

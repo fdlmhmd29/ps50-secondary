@@ -15,4 +15,8 @@ export default [
     path: "support",
     label: "Bantuan",
   },
+  {
+    path: "pricing",
+    label: "Paket",
+  },
 ];
