@@ -18,7 +18,7 @@ export default function Footer() {
             </Box>
             <nav className="footer__menu">
               <Link path="/kebijakan-layanan" label="Kebijakan Layanan" />
-              <Link path="/privasi" label="Privacy" />
+              <Link path="/kebijakan-privasi" label="Kebijakan Privasi" />
             </nav>
             <Text as="p" sx={styles.copyrightArea.copyright}>
               Copyright by 2021 Max More
