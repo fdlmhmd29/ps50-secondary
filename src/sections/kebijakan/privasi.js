@@ -5,21 +5,20 @@ import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 const data = {
-  title: "Kami berkomitmen untuk dengan pengetahuan berbasis fakta",
-  description:
-    "Hasil kerja kami akan menjamin perluasan jangkauan pasar bagi bisnis Anda. Sehingga sesuai dan tepat sasaran.",
-  btnName: "Pelajari selengkapnya",
-  btnURL: "/layanan/sosial-media-manajemen",
+  title: "Kebijakan Privasi",
+  description: "Diperbaharui pada tanggal 08/10/2021",
+  btnName: "Baca selengkapnya",
+  btnURL: "/kebijakan/privasi",
 };
 
 export default function Knowledge() {
   // Graphql image query
   const dataThumb = useStaticQuery(graphql`
     {
-      placeholderImage: file(relativePath: { eq: "knowledge-thumb.png" }) {
+      placeholderImage: file(relativePath: { eq: "privasi.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 1480
+            width: 1500
             layout: CONSTRAINED
             placeholder: BLURRED
           )
@@ -58,6 +57,7 @@ const styles = {
   thumbnail: {
     pl: [0, null, null, 4, 7, 8, 9],
     pr: [0, null, null, null, 2, 9, 6],
+    pb: [8, null, null, null, 2, 9, 7],
     display: "flex",
     mx: ["auto", null, null, 0],
     width: [338, "100%", null, null, 540, 730, 670, 760],

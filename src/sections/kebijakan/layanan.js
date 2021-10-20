@@ -8,31 +8,20 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import DrawingArrow from "assets/drawing-arrow.svg";
 
 const data = {
-  title: "Tingkatkan bisnis Anda dengan Social Media Manajemen kami",
-  description:
-    "Salah satu cara paling ampuh untuk meningkatkan Brand Awareness bisnis di dunia digital adalah dengan Sosial Media. Dengan terciptanya Brand Awarness, publik akan semakin yakin dengan bisnis kita",
-  btnName: "Keterangan lebih lanjut",
-  btnURL: "/layanan/sosial-media-manajemen",
-  points: [
-    {
-      icon: <IoIosPeople />,
-      text: "Terorganisir",
-    },
-    {
-      icon: <IoIosThumbsUp />,
-      text: "Berintegritas",
-    },
-  ],
+  title: "Kebijakan Layanan",
+  description: "Diperbaharui pada tanggal 08/10/2021",
+  btnName: "Baca selengkapnya",
+  btnURL: "/kebijakan/layanan",
 };
 
 export default function BusinessProfit() {
   // Graphql image query
   const dataThumb = useStaticQuery(graphql`
     {
-      placeholderImage: file(relativePath: { eq: "business-profit.png" }) {
+      placeholderImage: file(relativePath: { eq: "layanan.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 1480
+            width: 1600
             layout: CONSTRAINED
             placeholder: BLURRED
           )
@@ -90,6 +79,7 @@ const styles = {
     textAlign: ["center", null, null, "left"],
     width: ["100%", null, null, 350, 400, "470px"],
     pb: [7, null, null, 0],
+    pt: [7, null, null, 0],
     ".btn__link": {
       mt: [4, null, 5],
     },

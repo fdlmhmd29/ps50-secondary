@@ -19,4 +19,8 @@ export default [
     path: "pricing",
     label: "Paket",
   },
+  {
+    path: "contact-us",
+    label: "Hubungi Kami",
+  },
 ];

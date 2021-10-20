@@ -10,7 +10,7 @@ export default function CallToAction() {
   return (
     <div sx={styles.wrapper}>
       <Container sx={styles.container}>
-        <Box sx={styles.contentBox}>
+        <Box sx={styles.contentBox} id="contact-us">
           <Heading sx={styles.heading}>
             Punya pertanyaan? Jangan ragu untuk bertanya
           </Heading>

@@ -1,9 +1,9 @@
 import React from "react";
 import "assets/swiper/swiper-bundle.min.css";
-import { StickyProvider } from "../contexts/app/app.provider";
-import SEO from "components/seo";
-import Layout from "components/layout";
-import Terms from "../sections/terms";
+import { StickyProvider } from "../../contexts/app/app.provider";
+import SEO from "../../components/seo";
+import Layout from "../../components/alternative-layout/layout-second";
+import Terms from "../../sections/terms";
 import MessengerCustomerChat from "react-messenger-customer-chat";
 
 // Load other package css file

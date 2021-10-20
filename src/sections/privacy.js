@@ -125,6 +125,7 @@ const FAQ = () => {
     <Box as="section" sx={{ variant: "section.feedback" }}>
       <Container>
         <SectionHeader
+          sx={styles.contentBox}
           title="Kebijakan Privasi"
           description="Peraturan Max More Studio dibuat untuk kenyamanan yang berlaku untuk semua pelanggan. Dengan menggunakan layanan dari Max More Studio berarti Anda telah setuju untuk aturan ini."
         />
@@ -158,6 +159,9 @@ const FAQ = () => {
 export default FAQ;
 
 const styles = {
+  contentBox: {
+    pt: [10, null, null, 0],
+  },
   flex: {
     flexWrap: "wrap",
     flexDirection: ["column", null, null, null, null, "row-reverse"],
