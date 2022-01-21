@@ -6,6 +6,7 @@ import Logo from "components/logo";
 import { DrawerProvider } from "../../contexts/drawer/drawer.provider";
 import MobileDrawer from "./mobile-drawer";
 import menuItems from "./header.data";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 import LogoDark from "assets/logo-dark.svg";
 import Divider from "assets/divider.svg";
@@ -15,8 +16,9 @@ export default function Header({ className }) {
     <DrawerProvider>
       <header sx={styles.header} className={className} id="header">
         <Container sx={styles.container}>
-          <Logo src={LogoDark} />
-
+          <OutboundLink href="/">
+            <Logo src={LogoDark} />
+          </OutboundLink>
           <Flex as="nav" sx={styles.nav}>
             {menuItems.map(({ path, label }, i) => (
               <Link
